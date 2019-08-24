@@ -5,6 +5,23 @@ html {
   background: #f0f0f0;
 }
 
+a:visited , a:link, a:active{
+  text-decoration: unset;
+  color: inherit
+}
+
+
+hr {
+  border-radius: 100%;
+  border: none;
+  background: rgba(0,0,0,0.4);
+  height: 1px;
+  display: block;
+  margin-top:.4em
+}
+
+/* Login Page styles */
+
 .login-box {
   width: 30vw;
   height: 60vh;
@@ -17,19 +34,19 @@ html {
   margin-top: -32vh;
   border-radius: 4px;
   text-align: center;
-  padding: 1vw 1vh
+  padding: 1vw 1vh;
 }
 
 .login-logo {
   border-radius: 100%;
   width: 160px;
   height: 160px;
-  box-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
 }
 
-.login-form{
+.login-form {
   text-align: left;
-  padding:30px
+  padding: 30px;
 }
 
 .form-label {
@@ -37,32 +54,132 @@ html {
   margin-top: 20px;
 }
 
-.form-control-title{
-  margin:8px;
+.form-control-title {
+  margin: 8px;
 }
 
 .form-control {
-  width:100%;
+  width: 100%;
   height: 48px;
   border-radius: 4px;
   border: none;
-  box-shadow: inset 0px 0px 4px rgba(0,0,0,0.4);
-  padding-left:8px;
-  font-size: 1.5em
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+  padding-left: 8px;
+  font-size: 1.5em;
 }
 
 .form-button {
-  float:right;
-  padding:8px;
-  font-size:1.2em;
+  float: right;
+  padding: 8px;
+  font-size: 1.2em;
   background: #00e600;
-  border:0;
-  border-radius:4px;
-  color:#fff;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
   cursor: pointer;
+}
+
+/* Header */
+
+.header {
+  background: #00e600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  z-index: 2;
 }
 
 .header-logo {
   width: 40px;
   height: 40px;
+  border-radius: 100%;
+  padding: 4px;
+}
+
+.header-right {
+  float: right;
+  padding: 8px;
+}
+
+.header-menu{
+  display: inline-block;
+}
+
+.header-menu , .header-menu li {
+  padding:0;
+  margin:0;
+}
+
+.header-menu li {
+  padding:8px;
+  font-size: .7em;
+}
+
+
+.header-menu .menu-items{
+  list-style: none;
+  background: #fff;
+  padding:8px;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+  display: none;
+  position: absolute;
+  right:8px;
+  max-width: 200px;
+}
+
+.header-menu:hover .menu-items {
+  display: block;
+}
+
+.badge {
+  position: relative;
+  padding-right: 16px;
+}
+
+.badge .number {
+  background: #404040;
+  color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  right:-16px;
+  top:-16px;
+}
+
+.notification-refresh-icon {
+  float: right;
+  cursor: pointer
+}
+
+/* Content Page */
+
+.content {
+  padding-left:21vw;
+  padding-top:52px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  background: #fff;
+  box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+  display: inline-block;
+  width:18vw;
+  padding: 1vh 1vw;
+  height: 98vh;
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  margin-top:48px;
+}
+
+.sidebar-item {
+  padding-top:8px;
 }
