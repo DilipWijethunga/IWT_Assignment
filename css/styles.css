@@ -1,0 +1,21 @@
+#logo{
+    
+    width: 100px;
+    
+}
+
+#reglogin{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+#navbar{
+    
+    background-color: #00e600;
+}
+   
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
