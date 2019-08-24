@@ -20,11 +20,16 @@ label{
 .fix-width{
     width:150px;
 }
-.align-center{
 
-}
 .bttn1{
     margin-left: 200px;
+    padding:8px;
+    font-size:1.2em;
+    background: #00e600;
+    border:0;
+    border-radius:4px;
+    color:#fff;
+    cursor: pointer
 }
 .other{
     margin-left: 200px;
@@ -38,3 +43,21 @@ label{
     padding-left: 8px;
     padding-right: 8px;
 }
+.social-login img{
+    width: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.social-login {
+    text-align: center
+    
+}
+.error{
+    color:red;
+    font-size: 10px;
+    text-align:right;
+}
+
+
+
+
