@@ -92,3 +92,25 @@ a:link,a:visited,a:active{
     height: 150px;
 }
 
+.item button img{
+    height: unset;
+}
+
+.thumbnail{
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-position:center; 
+}
+
+.item{
+    width: 200px;
+    display: inline-block;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.addcart{
+    width: 20px;
+}
