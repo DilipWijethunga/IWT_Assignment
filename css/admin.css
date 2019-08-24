@@ -3,13 +3,24 @@ html {
   padding: 0;
   margin: 0;
   background: #f0f0f0;
-  padding-top:48px;
 }
 
 a:visited , a:link, a:active{
   text-decoration: unset;
   color: inherit
 }
+
+
+hr {
+  border-radius: 100%;
+  border: none;
+  background: rgba(0,0,0,0.4);
+  height: 1px;
+  display: block;
+  margin-top:.4em
+}
+
+/* Login Page styles */
 
 .login-box {
   width: 30vw;
@@ -68,12 +79,15 @@ a:visited , a:link, a:active{
   cursor: pointer;
 }
 
+/* Header */
+
 .header {
   background: #00e600;
   position: fixed;
   top: 0;
   left: 0;
   width:100vw;
+  z-index: 2;
 }
 
 .header-logo {
@@ -102,10 +116,6 @@ a:visited , a:link, a:active{
   font-size: .7em;
 }
 
-.header-menu hr {
-  border-radius: 100%;
-  background: rgba(0,0,0,0.7)
-}
 
 .header-menu .menu-items{
   list-style: none;
@@ -140,4 +150,36 @@ a:visited , a:link, a:active{
 .notification-refresh-icon {
   float: right;
   cursor: pointer
+}
+
+/* Content Page */
+
+.content {
+  padding-left:21vw;
+  padding-top:52px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  background: #fff;
+  box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+  display: inline-block;
+  width:18vw;
+  padding: 1vh 1vw;
+  height: 98vh;
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  margin-top:48px;
+}
+
+.sidebar-item {
+  padding-top:8px;
 }
