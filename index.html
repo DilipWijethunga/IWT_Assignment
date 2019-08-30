@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Online Meal Cart</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/slideshow.js"></script>
 </head>
 
 
@@ -60,8 +61,21 @@
         </div>
     </nav>
 
-    <div>
-        <img src="images/slideshow/07.jpg" alt="slideshow>" class="slideshow">
+    <div class="slideshow">
+        <img src="images/slideshow/01.jpg" alt="slideshow" class="slider left"/>
+        <img src="images/slideshow/02.jpg" alt="slideshow" class="slider left"/>
+        <img src="images/slideshow/03.jpg" alt="slideshow" class="slider"/>
+        <img src="images/slideshow/04.jpg" alt="slideshow" class="slider right"/>
+        <img src="images/slideshow/05.jpg" alt="slideshow" class="slider right"/>
+        <span onclick="handleChangeSlider(1,true)" class="button nxt-button">></span>
+        <span onclick="handleChangeSlider(-1,true)" class="button prv-button"><</span>
+        <div class="numbers">
+            <span onclick="handleChangeSlider(1)" class="button slider-number number-1">1</span>
+            <span onclick="handleChangeSlider(2)" class="button slider-number number-2">2</span>
+            <span onclick="handleChangeSlider(3)" class="button slider-number number-3">3</span>
+            <span onclick="handleChangeSlider(4)" class="button slider-number number-4">4</span>
+            <span onclick="handleChangeSlider(5)" class="button slider-number number-5">5</span>
+        </div>
     </div>
 
     <a class="header1">Meal by Categories</a>
@@ -162,6 +176,9 @@
     </div>
 
 </footer>
+<script type="text/javascript" >
+    slider();
+</script>
 <!--End of footer-->
 
 </html>

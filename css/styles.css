@@ -184,6 +184,11 @@ a:active {
     cursor: pointer;
 }
 
+.slideshow .button.active {
+    background: #fff;
+    color:#404040;
+}
+
 .slideshow .button.nxt-button{
     position: absolute;
     right: 8px ;
