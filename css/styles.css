@@ -1,7 +1,20 @@
+body{
+    background-color: #d5e7fc;
+}
+
 #logo{
-    
-    width: 100px;
-    
+    width: 150px;   
+}
+
+.items{
+    position: absolute;
+    top: 800px;
+}
+
+.slideshow{
+    position: absolute;
+    left: 200px;
+    top: 150px;
 }
 
 #reglogin{
@@ -11,7 +24,8 @@
 }
 
 #navbar{
-    
+    width: 100%;
+    height: 140px;    
     background-color: #00e600;
 }
    
@@ -20,6 +34,12 @@ html,body{
     padding: 0px;
 }
 
+.header1{
+    position: absolute;
+    font-size: 40px;
+    top: 730px;
+    left: 500px;
+}
 #cart{
    position: absolute;
     right: 15px;
@@ -84,9 +104,6 @@ a:link,a:visited,a:active{
     margin: 0px!important;
 }
 
-.slideshow{
-    padding: 100px;
-}
 
 .item img{
     height: 150px;
@@ -100,17 +117,72 @@ a:link,a:visited,a:active{
     height: 200px;
     width: 200px;
     background-size: cover;
-    background-position:center; 
+    background-position:center;   
 }
 
 .item{
     width: 200px;
     display: inline-block;
     margin-left: 50px;
-    margin-bottom: 50px;
-    
+    margin-bottom: 50px; 
 }
 
 .addcart{
     width: 20px;
 }
+
+.searchbtn{
+    position: absolute;
+    width: 20px;
+    padding-left: 0px;
+    right: 9px;
+    top: 5px;
+    border-radius: 10px;
+}
+
+.search{
+    position: absolute;
+    right: 10px;
+    top: 60px;
+}
+
+.searcharea{
+    background-color: greenyellow;
+    border: none;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.footer{
+    position: absolute;
+    border: 0;
+    top: 1800px;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #cdd0ce;
+}
+
+.links{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.socialbtn{
+    margin-right: 20px;
+}
+
+footer .socialbtn img{
+    position: relative;
+    float: right;
+    width: 50px;
+    bottom: 100px;
+    padding: 5px;
+}
+
+.footer .copyright{
+    margin-left: 600px;
+   
+} 
