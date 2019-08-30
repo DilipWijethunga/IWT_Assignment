@@ -3,7 +3,7 @@ body{
 }
 
 #logo{
-    width: 100px;   
+    width: 150px;   
 }
 
 .items{
@@ -24,7 +24,8 @@ body{
 }
 
 #navbar{
-    
+    width: 100%;
+    height: 140px;    
     background-color: #00e600;
 }
    
@@ -116,7 +117,7 @@ a:link,a:visited,a:active{
     height: 200px;
     width: 200px;
     background-size: cover;
-    background-position:center; 
+    background-position:center;   
 }
 
 .item{
@@ -155,9 +156,33 @@ a:link,a:visited,a:active{
 
 .footer{
     position: absolute;
-    bottom: 0px;
-    margin-bottom: 0px;
+    border: 0;
+    top: 1800px;
+    bottom: 0;
     width: 100%;
     height: 200px;
-    background-color: aqua;
+    background-color: #cdd0ce;
 }
+
+.links{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.socialbtn{
+    margin-right: 20px;
+}
+
+footer .socialbtn img{
+    position: relative;
+    float: right;
+    width: 50px;
+    bottom: 100px;
+    padding: 5px;
+}
+
+.footer .copyright{
+    margin-left: 600px;
+   
+} 
