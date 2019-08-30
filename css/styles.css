@@ -4,6 +4,10 @@ body{
 
 #logo{
     width: 150px;   
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
 }
 
 .items{
@@ -27,6 +31,7 @@ body{
     width: 100%;
     height: 140px;    
     background-color: #00e600;
+    text-align: center;
 }
    
 html,body{
@@ -54,17 +59,15 @@ html,body{
 }
 
 #cname{
-    position: absolute;
     font-family: cursive;
     font-size: 50px;
 }
 
 #navlist{
-    position: absolute;
-    top: 70px;
     font-size: 20px;
-    width: 100%;
     text-align: center;
+    display: inline-block;
+    padding-right: 80px
 }
 
 #navlist a{
@@ -141,9 +144,9 @@ a:link,a:visited,a:active{
 }
 
 .search{
-    position: absolute;
-    right: 10px;
-    top: 60px;
+    float: right;
+    margin-right: 8px;
+    position: relative;
 }
 
 .searcharea{
@@ -152,6 +155,14 @@ a:link,a:visited,a:active{
     width: 250px;
     height: 30px;
     border-radius: 5px;
+    padding-left: 8px;
+    transition-duration: .5s;
+    position: absolute;
+    right: 8px;
+}
+
+.searcharea:focus{
+    width:calc(100vw - 200px);
 }
 
 .footer{
@@ -185,4 +196,12 @@ footer .socialbtn img{
 .footer .copyright{
     margin-left: 600px;
    
-} 
+}
+
+.header-second-bar {
+    background: #404040;
+    color: #fff;
+    padding: 16px;
+    margin-top:26px;
+    position: relative;
+}
