@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/register.css">
         <title>Register Page</title>
+        <script src="js/register.js"></script>
     </head>
 
     <body>
@@ -21,10 +22,12 @@
         <input type="radio" name="gender" value="female">Female</input><br/><br/>
     <label for="telno">
         Telephone:</label>
-    <input type="tel" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input><br/><br/>
+    <input type="tel" onchange="validateTelephone()" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
+    <p id="telerror" class="error"></p>
 <label for="DOB">
     Date of Birth:</label>
-<input type="date" class="fix-width" name="DOB" id="DOB" ></input><br/><br/>
+<input type="date" onchange="validateDob" class="fix-width" name="DOB" id="DOB" ></input>
+<p id="dobError" class="error"></p>
 <label for="email">
     Email Address:</label>
 <input type="email" class="fix-width" name="email" id="email" pattern="[a-z0-9._+-] +@[a-z]{5}+/.[a-z0-9]{3}" required></input><br/><br/>
@@ -62,9 +65,16 @@
 <div class="allign-text"><a>
     OR</a>
 </div>
+<br/>
+<div class="social-login"><a href="#">
+    <img src="images/social/google.svg" alt="google account"/> </a>
+    <a href="#">
+<img src="images/social/facebook.svg" alt="facebook account"/></a>
+    <a href="#">
+<img src="images/social/twitter.svg" alt="twitter account"/>
+    </a>
 
-
-
+</div>
 
 
 
