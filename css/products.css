@@ -1,5 +1,5 @@
 body {
-  background-color: #d5e7fc;
+  background-color: #ffffff;
 }
 
 /* Header Styles */
@@ -21,7 +21,7 @@ body {
 #navbar {
   width: 100%;
   height: 140px;
-  background-color: #00e600;
+  background-image: url(../images/headerbcak.jpg);
   text-align: center;
 }
 
@@ -359,5 +359,3 @@ suggesttxt{
     float: right;
     padding: 5px
 }
-
-
