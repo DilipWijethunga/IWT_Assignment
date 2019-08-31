@@ -15,8 +15,8 @@ body {
 .cart_user{
     position: absolute;
     right: 10px;
-    top: 5px;
-    fill: green;
+    top: 10px;
+    fill:green;
 }
 
 #reglogin {
