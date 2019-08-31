@@ -1,0 +1,196 @@
+body{
+    background-color: lightgoldenrodyellow;
+    background-size: auto;
+}
+
+
+#logo{
+    width: 150px;   
+}
+
+#reglogin{
+    position: absolute;
+    right: 45px;
+    top: 20px;
+}
+
+#reglogin button,login{
+    background-color: lawngreen;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+   
+html,body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#cart{
+   position: absolute;
+    right: 15px;
+    top: 18px; 
+}
+
+
+#cname{
+    position: absolute;
+    font-family: cursive;
+    font-size: 50px;
+}
+
+#navlist{
+    position: absolute;
+    top: 100px;
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+#navlist a{
+    padding-left: 1px;
+    padding-right: 10px;
+}
+
+a:link,a:visited,a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu{
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu-content{
+    display: none;
+    position: absolute;
+    background-color:greenyellow;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.menu:hover .menu-content{
+    display: block;
+}
+
+.menu li, .menu li a{
+    padding: 0px!important;
+    margin: 0px!important;
+}
+
+
+.searchbtn{
+    position: absolute;
+    width: 20px;
+    padding-left: 0px;
+    right: 9px;
+    top: 5px;
+    border-radius: 10px;
+}
+
+.search{
+    position: absolute;
+    right: 600px;
+    top: 90px;
+}
+
+.searcharea{
+    background-color: greenyellow;
+    border: none;
+    width: 550px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+
+.prodctable td{
+    border: 10px;
+    vertical-align: top;
+}
+
+
+
+.prodct{
+    width: 350px;
+    
+    
+	
+}
+
+
+.prodtable{
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    
+}
+
+.categories{
+   position: sticky; 
+    top:0;
+}
+
+
+
+.prodtable a{
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+.prodtable img{
+    width: 200px;
+    padding: 10px;
+    vertical-align: top;
+}
+.buy-wrapper{
+    position: relative;
+    margin-top: 14px;
+}
+
+
+.pdescript{
+    width: 600px;
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+
+
+
+.title {
+    font-size: 30px;
+    font-family: monospace;
+}
+.head{
+    font-size: px;
+    font-family: sans-serif;
+}
+
+.head img{
+    width: 50px;
+    
+}
+.photo{
+    width: 50px;
+}
+.botton{
+    
+}
+
+
+
+
+
+
+
+
