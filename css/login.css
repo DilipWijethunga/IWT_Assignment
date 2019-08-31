@@ -1,0 +1,64 @@
+body{
+    background-image: url("../images/catamaran_cruises_blue_tropical_water_aerial_photography-wallpaper-1366x768.jpg")
+}
+
+.box{
+    background-color: rgba(192,192,192,0.8);
+    position: relative;
+	height:500px;
+	width: 600px;
+	margin: 20% auto; 
+	box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);	
+    width:400px;
+    margin: auto
+    
+}
+h1{
+    
+    text-align: center;
+}
+.text-box{
+    margin-left: 50px;
+    border-radius: 5px;
+    width:300px;
+    text-align: center
+    
+}
+
+.bttn1{
+    display: block;
+    margin: auto;
+    padding:8px;
+    font-size:1.2em;
+    background: #00e600;
+    border:0;
+    border-radius:4px;
+    color:#fff;
+    cursor: pointer
+}
+
+.allign-text{
+    padding-left: 8px;
+    padding-right: 12px;
+    text-align: center
+}
+
+.formatting{
+   padding-left: 47px;
+}
+
+.social-login{
+    padding-top: 16px
+}
+
+.social-login img{
+    width: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.red {
+    margin-right:47px;
+    float:right;
+    color:red
+}
