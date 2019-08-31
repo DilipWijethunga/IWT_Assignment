@@ -253,7 +253,8 @@ a:active {
 }
 
 .socialbtn {
-  margin-right: 20px;
+  margin-right: 0px;
+  margin-top: -40px;
 }
 
 footer .socialbtn img {
@@ -266,7 +267,7 @@ footer .socialbtn img {
 
 .footer .copyright {
   width:100%;
-  margin-top:16px;
+  margin-top:32px;
   border-top: solid 1px rgba(48, 22, 4,0.4);
   text-align: center;
   padding-top:8px;
@@ -274,6 +275,7 @@ footer .socialbtn img {
 
 .footer td {
   position: relative;
+  padding:8px;
 }
 
 .footer td .vertical-line {
