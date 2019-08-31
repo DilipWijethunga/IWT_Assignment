@@ -1,9 +1,155 @@
+body{
+    background-image: url("../images/mas.jpg");
+    background-size:cover;
+    background-position: center;
+    margin:0
+}
+
+/* Header Styles */
+
+#logo {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#reglogin {
+  position: absolute;
+  right: 45px;
+  top: 20px;
+}
+
+#navbar {
+  width: 100%;
+  height: 140px;
+  background-color: #00e600;
+  text-align: center;
+}
+
+
+#cname {
+  font-family: cursive;
+  font-size: 50px;
+}
+
+.header1 {
+  position: absolute;
+  font-size: 40px;
+  top: 730px;
+  left: 500px;
+}
+#cart {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+}
+
+#reglogin button,
+login {
+  background-color: lawngreen;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+}
+.searchbtn {
+  position: absolute;
+  width: 20px;
+  padding-left: 0px;
+  right: 9px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.search {
+  float: right;
+  margin-right: 8px;
+  position: relative;
+}
+
+.searcharea {
+  background-color: greenyellow;
+  border: none;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 8px;
+  transition-duration: 0.5s;
+  position: absolute;
+  right: 8px;
+}
+
+.searcharea:focus {
+  width: calc(100vw - 200px);
+}
+
+#navlist {
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  padding-right: 80px;
+}
+
+#navlist a {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu-content {
+  color: black;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.menu:hover .menu-content {
+  display: block;
+}
+
+.menu li,
+.menu li a {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.header-second-bar {
+  background: #404040;
+  color: #fff;
+  padding: 16px;
+  margin-top: 26px;
+  position: relative;
+}
+
+/*end of the header*/
+
+
 .box{
+    background-color: rgba(192,192,192,0.8);
     border:dotted 2px blue;
     padding: 15px;
     margin:auto;
     width:500px;
-    margin-top: 20px;
+    margin-top: 50px;
     
 }
 .box-title{
