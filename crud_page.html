@@ -1,18 +1,158 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin CRUD Page</title>
+    <title>Manage Your Products</title>
+    <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
-    <div class="wrapper">
-        <nav class="">
-            <a class="logo">
-                <img src="images/logo.jpg" alt="Food order system logo" >
-            </a>
-            
-        </nav>
+    <!-- Header start -->
+    <header class="header">
+        <a href="index.html">
+            <img width="40px" height="40px" class="header-logo" src="images/logo.jpg" src="Food order system logo" />
+        </a>
+        <div class="header-right">
+            <ul class="header-menu">
+                <a class="badge" href="#">
+                    <img src="images/bell.svg" alt="Notifications" />
+                    <span class="number">86</span>
+                </a>
+                <div class="menu-items">
+                    <li class="notification-main">
+                        <b>Notifications</b>
+                        <img class="notification-refresh-icon" src="images/refresh.svg" alt="Refresh icon" />
+                        <hr />
+                    </li>
+                    <li>
+                        <a href="">
+                            <b>Samantha kumara</b> cheff has made a mistake.<br />
+                            <small>Just Now</small>
+                        </a>
+                        <hr />
+                    </li>
+                    <li>
+                        <a href="">
+                            <b>Roshen Priyalal</b> driver coudn't reached to the customer at the time.<br />
+                            <small>Just Now</small>
+                        </a>
+                        <hr />
+                    </li>
+                </div>
+            </ul>
+            <ul class="header-menu">
+                <a href="#">
+                    <img class="header-user" src="images/account.svg" alt="account icon" />
+                    <img class="header-user" src="images/dropdown.svg" alt="dropdown down icon" />
+                </a>
+                <div class="menu-items">
+                    <li>
+                        <a href="#">Profile</a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="#">Dashboard</a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="admin_login.html">Logout</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <!-- Sidebar-->
+    <nav class="sidebar">
+        <ul class="sidebar-list">
+            <li class="sidebar-item">
+                <a href="admin_dashboard.html">Dashboard</a>
+                <hr />
+            </li>
+            <li class="sidebar-item">
+                <a href="crud_page.html">Categories</a>
+                <hr />
+            </li>
+            <li class="sidebar-item">
+                <a href="crud_page.html">Products</a>
+                <hr />
+            </li>
+            <li class="sidebar-item">
+                <a href="crud_page.html">Drivers</a>
+                <hr />
+            </li>
+            <li class="sidebar-item">
+                <a href="crud_page.html">Cheffs</a>
+                <hr />
+            </li>
+            <li class="sidebar-item">
+                <a href="crud_page.html">Customers</a>
+                <hr />
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="paper">
+            <h4 class="paper-title">Products</h4>
+            <div class="paper-actions">
+                <button class="button green">
+                    <img src="images/add.svg" />
+                    Create
+                </button>
+                <button class="button purple">
+                    <img src="images/search_white.svg" />
+                    Search
+                </button>
+            </div>
+            <hr class="divider" />
+            <table class="table">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Image</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Cheff Spent Time</th>
+                    <th>Available Sizes</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>
+                        Rice and Curry
+                    </td>
+                    <td>
+                        <img class="avatar" width="32" src="images/avatar.jpg" alt="Ramesh Kithsiri Profile Photo" />
+                    </td>
+                    <td>Lunch</td>
+                    <td>Rs 150/=</td>
+                    <td>Rice and 4 different curries.</td>
+                    <td>30 Minutes</td>
+                    <td>Full/ Half/ Family Parcel.</td>
+                    <td>
+                        <button style="width:32px;height:32px" class="button red round">
+                            <img width="20" height="20" src="images/close.svg" />
+                        </button>
+                        <button style="width:32px;height:32px" type="button" class="button green round">
+                            <img width="20" height="20" src="images/pencil.svg" />
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-left">
+                        <span class="button round">
+                            < </span> </td> <td class="align-center" colspan="6">
+                                1 of 5
+                    </td>
+                    <td class="align-right">
+                        <span class="button round">></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
+
 </html>
