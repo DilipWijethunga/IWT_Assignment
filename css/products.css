@@ -119,12 +119,12 @@ a:link,a:visited,a:active{
 
 /*main table for products*/
 .prodctable td{
-    border: 1px solid black;
+    border: 0px;
     vertical-align: top;
 }
 
 .footertbl td{
-    border: 1px solid black;
+    border: 1px1
     vertical-align: top;
 }
 
@@ -148,10 +148,11 @@ a:link,a:visited,a:active{
 /*end of colgroup*/
 
 .prodtable{
-    position: absolute;
-    top: 180px;
+    margin-top:  50px;
+    margin-bottom: 30px;
     left: 20px;
     background-color: rgb(204, 234, 195);
+    border: none;
 }
 
 .buycart{
@@ -178,7 +179,6 @@ a:link,a:visited,a:active{
 }
 
 .space2{
-    width: 10px;
     background-color: #ffffff;
 }
 
@@ -205,7 +205,6 @@ a:link,a:visited,a:active{
 
 
 .pdescript{
-    width: 450px;
     padding-left: 20px;
     padding-right: 5px;
     padding-top: 10px;
@@ -251,12 +250,12 @@ a:link,a:visited,a:active{
 /*end of price area*/
 
 /*Suggestion*/
+
 .suggestion{
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 200px;
-    margin-top: 3%;
+    
+}
+.thumbnail{
+    display: inline-block;
     justify-content: center;
 }
 
@@ -274,13 +273,6 @@ suggesttxt{
     padding: 10% 1% 1% 50%;
 }
 
-.suggestion img{
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    padding: 40px 0px 0px 0px;
-}
-
 .suggestion a{
     position: inherit;
     margin-left:
@@ -288,15 +280,14 @@ suggesttxt{
 }
 
 .thumbnail{
-    height: 200px;
-    width: 200px;
+    height: 130px;
+    width: 130px;
     background-size: cover;
     background-position:center;   
 }
 /*end of suggestions*/
 
 .footer{
-    position: absolute;
     border: 0;
     top: 700px;
     bottom: 0;
