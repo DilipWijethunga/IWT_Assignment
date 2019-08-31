@@ -35,10 +35,6 @@ function validatepassword(){
 
 
 
-
-
-
-
 function validateEmail(){
     var email=document.getElementById("email").value;
     if(/^\S+@\S+$/.test(email)){

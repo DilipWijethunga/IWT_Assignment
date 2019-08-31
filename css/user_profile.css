@@ -1,23 +1,44 @@
+body{
+   background-image: url(../images/ca.jpg);
+    background-size:cover;
+    margin:0
+}
+
 .table-height{
     height: 100vh;
 }
 .col1{
-    text-align: center
-    width:300px;
+    text-align: center;
+    width:200px;
 }
 
 .image{
-    width: 100px;
+    text-align: center;
+    width: 250px;
 }
 
-.vertical-align2{
-    vertical-align: top;
-    width: 500px;
-    padding-left: 25px;
+.myprofile{
+    text-align:center;
 }
 
-.text-format{
-    float:center;
+.text-format{ 
+    text-align:left;
 }
 
+.col2border{
+    padding-left: 15px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.secondcol{
+    margin-left:170px;
+}
 
+#accountLink {
+    border-radius: 5px;
+    width:100%;
+    height:100%;
+    background-color: azure;
+}
