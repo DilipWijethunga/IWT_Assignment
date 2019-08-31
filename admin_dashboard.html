@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/admin.css">
+    <script src="js/admin.js"></script>
 </head>
 
 <body>
@@ -147,8 +148,8 @@
                     <td>1 H</td>
                     <td>Too Late.</td>
                     <td>
-                        <input type="button" class="button red" value="Bang" />
-                        <input type="button" class="button green" value="Ignore" />
+                        <input type="button" onclick="snack('Are sure you want to bang this user?','confirm','red');" class="button red" value="Bang" />
+                        <input type="button" onclick="snack('Successfully ignored.','message','green');" class="button green" value="Ignore" />
                     </td>
                 </tr>
                 <tr>
@@ -162,8 +163,8 @@
                     <td>1 H</td>
                     <td>Too Late.</td>
                     <td>
-                        <input type="button" class="button red" value="Bang" />
-                        <input type="button" class="button green" value="Ignore" />
+                        <input type="button" onclick="snack('Are sure you want to bang this user?','confirm','red');" class="button red" value="Bang" />
+                        <input type="button" onclick="snack('Successfully ignored.','message','green');" class="button green" value="Ignore" />
                     </td>
                 </tr>
                 <tr class="table-pagination">
@@ -178,6 +179,11 @@
                 </tr>
             </table>
         </div>
+    </div>
+
+
+    <!-- Snacks -->
+    <div id="snacks" class="snacks">
     </div>
 </body>
 

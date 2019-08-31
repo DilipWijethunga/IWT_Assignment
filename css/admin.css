@@ -51,16 +51,16 @@ hr {
   padding-top: 4px;
 }
 
-.form-label {
+.login-form .form-label {
   display: block;
   margin-top: 20px;
 }
 
-.form-control-title {
+.login-form .form-control-title {
   margin: 8px;
 }
 
-.form-control {
+.login-form .form-control {
   width: 100%;
   height: 48px;
   border-radius: 4px;
@@ -70,7 +70,7 @@ hr {
   font-size: 1.5em;
 }
 
-.form-button {
+.login-form .form-button {
   float: right;
   padding: 8px;
   font-size: 1.2em;
@@ -141,7 +141,7 @@ hr {
 }
 
 .badge .number {
-  background: #404040;
+  background: rgb(255, 86, 65);
   color: #fff;
   border-radius: 4px;
   position: absolute;
@@ -336,7 +336,7 @@ hr {
 
 .table th {
   background: rgba(0, 0, 0, 0.4);
-  font-weight: 500
+  font-weight: 500;
 }
 
 .table tr {
@@ -345,11 +345,12 @@ hr {
 
 .table-pagination td {
   padding-top: 16px;
-  border-top: 1px solid rgba(0,0,0,0.4)
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .button {
   padding: 6px;
+  margin: 4px;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   border: none;
@@ -390,4 +391,146 @@ hr {
 .avatar {
   border-radius: 100%;
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay .popup {
+  width: 48vw;
+  margin-left: 25vw;
+  padding: 1vh 1vw;
+  margin-top: 10vh;
+}
+
+.form-control {
+  border: solid 1px rgba(0, 0, 0, 0.4);
+  position: relative;
+  height: 32px;
+  display: block;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.form-control-input {
+  width: 99%;
+  border: 0;
+  height: 32px;
+  background: transparent;
+  border: none;
+  padding-left: 8px;
+}
+
+.form-control-label {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: inline;
+  transition-duration: 0.3s;
+}
+
+.form-control-input:focus + .form-control-label,
+.form-control-input:valid + .form-control-label {
+  top: -8px;
+  background: #fff;
+}
+
+.form-control.form-control-image {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  margin-top: 8px;
+  background-image: url(../images/add-black.svg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.form-control.form-control-image .form-control-input {
+  height: 160px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form-control.form-control-textarea {
+  height: 100px;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.form-control.form-control-textarea .form-control-input {
+  height: 84px;
+  padding-top: 16px;
+}
+
+.form-control.form-control-multi-select {
+  max-height: 100px;
+  height: unset;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.form-control.form-control-multi-select .form-control-input {
+  height: unset;
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+.form-buttons-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.snacks {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.snack {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 2px #404040;
+  margin:8px;
+}
+
+.snack-button {
+  background: transparent;
+  border-radius: 4px;
+  padding:4px;
+  margin:4px;
+}
+
+.snack-button.red {
+  border: solid 2px rgb(255, 86, 65);
+  color:  rgb(255, 86, 65);
+}
+
+.snack-button.green {
+  border: solid 2px rgb(76, 175, 80);
+  color:  rgb(76, 175, 80);
+}
+
+.snack.red {
+  color:  rgb(255, 86, 65);
+}
+
+.snack.green {
+  color:  rgb(76, 175, 80);
 }
