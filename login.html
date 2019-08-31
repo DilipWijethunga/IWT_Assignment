@@ -1,34 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet"  href="images/catamaran_cruises_blue_tropical_water_aerial_photography-wallpaper-1366x768.jpg">
+    <head>
+    <link rel="stylesheet"  href="images/mas2.jpg">
+    
     <link rel="stylesheet" type="text/css" href="css/login.css">
+    
     <script src="js/login.js" type="text/javascript"></script>
+    
     <title>Login Page</title>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
         
     
-</head>
+    </head>
 
 <body>
+    
+    <!-- Header -->
+    
+    <nav id="navbar">
 
-    <form onsubmit="return validate()">
+        <!--    Logo-->
+        <a href="#"><img src="images/coffee-time-png_91570.png" alt="logo" id="logo"> </a>
+
+
+        <a id="cname">Online Meal Cart</a>
+
+        <!--    Register and Login buttons-->
+        <div id="reglogin">
+            <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
+            <button id="login">
+                Login
+            </button>
+            <img width="16" src="images/cart.svg" alt="cart">
+        </div>
+
+        <!--    Navigation Bar-->
+        <div class="header-second-bar">
+            <div id="navlist">
+                <a href="index.html">Home</a>
+                <ul class="menu">
+                    <a href="#">Menu</a>
+                    <div class="menu-content">
+                        <li><a href="#">Rice and Curry</a></li>
+                        <li><a href="#">Fried Rice</a></li>
+                        <li><a href="#">Lankan Foods</a></li>
+                        <li><a href="#">Chinese Foods</a></li>
+                        <li><a href="#">Indian Foods</a></li>
+                        <li><a href="#">Beverage</a></li>
+                        <li><a href="#">BBQ</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                    </div>
+                </ul>
+                <a href="#">Outlets</a>
+                <a href="#">Offers</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact US</a>
+            </div>
+
+            <!-- Search Button-->
+            <div class="search">
+                <input type="text" placeholder="Search..." class="searcharea">
+                <a href="#"><img src="images/search.svg" class="searchbtn"> </a>
+            </div>
+        </div>
+    </nav>
+    
+    
+<!--Login form-->    
+
+    <form action="index.html" onsubmit="return validateEmail()">
         <div class="box">
         <h1>Login</h1><br/>
         
         
-<input type="text" class="text-box" name="username" id="username" placeholder="User name" required></input><br/><br/>
+<input type="text" class="text-box" name="username" id="username" placeholder="User name" required></input>
+<p id="userError" class="error"></p>
 
-<input type="password" class="text-box" name="password" id="password" placeholder="Password" required></input><br/><br/>
+<input type="password" class="text-box" name="password" id="password" placeholder="Password" required></input>
+<p id="passwordError" class="error"></p>
     
     <div class="formatting">
    <input type="checkbox" name="remember" id="remember">Remember Me</a></input>
     
-    <a class="red" href="">Forgot Password?</a> 
+    <a class="forgot" href="">Forgot Password?</a> 
      </div>
 
 <br/><br/>
 
-<button class="bttn1" type="button" onclick="window.location.href = 'index.html'">Login</button><br/><br/><br/>
+<button class="bttn1"  type="submit">Login</button><br/><br/><br/>
         
 <div class="allign-text"><a>
     Or login with</a>

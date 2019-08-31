@@ -1,0 +1,23 @@
+.table-height{
+    height: 100vh;
+}
+.col1{
+    text-align: center
+    width:300px;
+}
+
+.image{
+    width: 100px;
+}
+
+.vertical-align2{
+    vertical-align: top;
+    width: 500px;
+    padding-left: 25px;
+}
+
+.text-format{
+    float:center;
+}
+
+

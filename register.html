@@ -2,42 +2,104 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/register.css">
+        <link rel="stylesheet" href="images/mas.jpg">
         <title>Register Page</title>
         <script src="js/register.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
 
     <body>
+        
+    
+    <!-- Header -->
+    
+    <nav id="navbar">
+
+        <!--    Logo-->
+        <a href="#"><img src="images/coffee-time-png_91570.png" alt="logo" id="logo"> </a>
+
+
+        <a id="cname">Online Meal Cart</a>
+
+        <!--    Register and Login buttons-->
+        <div id="reglogin">
+            <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
+            <button id="login">
+                Login
+            </button>
+            <img width="16" src="images/cart.svg" alt="cart">
+        </div>
+
+        <!--    Navigation Bar-->
+        <div class="header-second-bar">
+            <div id="navlist">
+                <a href="index.html">Home</a>
+                <ul class="menu">
+                    <a href="#">Menu</a>
+                    <div class="menu-content">
+                        <li><a href="#">Rice and Curry</a></li>
+                        <li><a href="#">Fried Rice</a></li>
+                        <li><a href="#">Lankan Foods</a></li>
+                        <li><a href="#">Chinese Foods</a></li>
+                        <li><a href="#">Indian Foods</a></li>
+                        <li><a href="#">Beverage</a></li>
+                        <li><a href="#">BBQ</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                    </div>
+                </ul>
+                <a href="#">Outlets</a>
+                <a href="#">Offers</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact US</a>
+            </div>
+
+            <!-- Search Button-->
+            <div class="search">
+                <input type="text" placeholder="Search..." class="searcharea">
+                <a href="#"><img src="images/search.svg" class="searchbtn"> </a>
+            </div>
+        </div>
+    </nav>
+        
+        
+<!-- Register -->
 
         <form>
             <div class="box">
                 <div class="align-center">
                 <h4 class="box-title">Personal Information</h4><br/>
 
+                <!-- Name  -->
                 <label for="firstname">        
                     Name:</label>
                 <input type="text" class="fix-width" name="firstname" id="firstname" placeholder="First name"></input><br/><br/>
-            <label for="gender">
-                Gender:</label>
-            <input type="radio" name="gender" id="gender" value="male">Male</input>
-        <input type="radio" name="gender" value="female">Female</input><br/><br/>
+              
+                <!-- Gender-->
+                <label for="gender">
+                    Gender:</label>
+                <input type="radio" name="gender" id="gender" value="male">Male</input>
+                <input type="radio" name="gender" value="female">Female</input><br/><br/>
     <label for="telno">
         Telephone:</label>
     <input type="tel" onchange="validateTelephone()" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
     <p id="telerror" class="error"></p>
-<label for="DOB">
-    Date of Birth:</label>
-<input type="date" onchange="validateDob" class="fix-width" name="DOB" id="DOB" ></input>
-<p id="dobError" class="error"></p>
+<label for="Age">
+    Age:</label>
+<input type="number" min="0" max="124" onchange="validateAge()" class="fix-width" name="Age" id="Age" ></input>
+<p id="ageError" class="error"></p>
 <label for="email">
     Email Address:</label>
-<input type="email" class="fix-width" name="email" id="email" pattern="[a-z0-9._+-] +@[a-z]{5}+/.[a-z0-9]{3}" required></input><br/><br/>
+<input type="email" onchange="validateEmail()" class="fix-width" name="email" id="email" required></input>
 <p id="emailError" class="error"></p>
 <label for="pwd1">
     Password:</label>
 <input type="password" class="fix-width" name="pwd1" placeholder="create a password" id="pwd1"></input><br/><br/>
 <label for="pwd2">
     Confirm Password:</label>
-<input type="password" class="fix-width" name="pwd2" placeholder="type password again" id="pwd2"></input><br/><br/>
+<input type="password" onchange="validatepassword()" class="fix-width" name="pwd2" placeholder="type password again" id="pwd2"></input>
+<p id="passwordError" class="error"></p>
+<br/><br/>
 </div>
 </div>
 
@@ -58,7 +120,7 @@
 <input type="text" class="fix-width" name="postcode" id="postcode"></input><br/><br/>
 
 
-<button class="bttn1" type="button" onclick="window.location.href = 'index.html'">Sign Up</button><br/>
+<button class="bttn1" type="submit">Sign Up</button><br/>
 </div>
 </div>
 <br/>
