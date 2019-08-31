@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet"  href="images/catamaran_cruises_blue_tropical_water_aerial_photography-wallpaper-1366x768.jpg">
+    <link rel="stylesheet"  href="images/bbb.jpg">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <script src="js/login.js" type="text/javascript"></script>
     <title>Login Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
         
     
 </head>
 
 <body>
 
-    <form onsubmit="return validate()">
+    <form action="index.html" onsubmit="return validateEmail()">
         <div class="box">
         <h1>Login</h1><br/>
         
         
-<input type="text" class="text-box" name="username" id="username" placeholder="User name" required></input><br/><br/>
+<input type="text" class="text-box" name="username" id="username" placeholder="User name" required></input>
+<p id="userError" class="error"></p>
 
-<input type="password" class="text-box" name="password" id="password" placeholder="Password" required></input><br/><br/>
+<input type="password" class="text-box" name="password" id="password" placeholder="Password" required></input>
+<p id="passwordError" class="error"></p>
     
     <div class="formatting">
    <input type="checkbox" name="remember" id="remember">Remember Me</a></input>
@@ -28,7 +31,7 @@
 
 <br/><br/>
 
-<button class="bttn1" type="button" onclick="window.location.href = 'index.html'">Login</button><br/><br/><br/>
+<button class="bttn1"  type="submit">Login</button><br/><br/><br/>
         
 <div class="allign-text"><a>
     Or login with</a>

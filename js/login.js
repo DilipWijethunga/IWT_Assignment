@@ -1,13 +1,13 @@
-function validate(){
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-  
-    if(username =="" || password ==""){
-        alert = ("You can't leave empty spaces");
+function validateEmail(){
+    var email=document.getElementById("username").value;
+    if(/^\S+@\S+$/.test(email)){
+       document.getElementById("userError").innerHTML="";
+        return true;
+    }
+    else{
+        document.getElementById("userError").innerHTML="Please enter a valid email address. example@email.com";
         return false;
     }
-else{
-    return true;
-}
+
 }
 
