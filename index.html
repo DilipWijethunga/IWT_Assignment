@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Meal Cart</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/slideshow.js"></script>
@@ -26,7 +27,9 @@
             <button id="login">
                 Login
             </button>
-            <img width="16" src="images/cart.svg" alt="cart">
+            <img width="20" src="images/cart.svg" alt="cart">
+            <a href="#"><img width="20" src="images/account.svg" alt="cart"></a>
+
         </div>
 
         <!--    Navigation Bar-->
@@ -62,20 +65,20 @@
     </nav>
 
     <div class="slideshow">
-        <img src="images/slideshow/01.jpg" alt="slideshow" class="slider left"/>
-        <img src="images/slideshow/02.jpg" alt="slideshow" class="slider left"/>
-        <img src="images/slideshow/03.jpg" alt="slideshow" class="slider"/>
-        <img src="images/slideshow/04.jpg" alt="slideshow" class="slider right"/>
-        <img src="images/slideshow/05.jpg" alt="slideshow" class="slider right"/>
+        <img src="images/slideshow/01.jpg" alt="slideshow" class="slider left" />
+        <img src="images/slideshow/02.jpg" alt="slideshow" class="slider left" />
+        <img src="images/slideshow/03.jpg" alt="slideshow" class="slider" />
+        <img src="images/slideshow/04.jpg" alt="slideshow" class="slider right" />
+        <img src="images/slideshow/05.jpg" alt="slideshow" class="slider right" />
         <span onclick="handleChangeSlider(1,true)" class="button nxt-button">></span>
-        <span onclick="handleChangeSlider(-1,true)" class="button prv-button"><</span>
-        <div class="numbers">
-            <span onclick="handleChangeSlider(1)" class="button slider-number number-1">1</span>
-            <span onclick="handleChangeSlider(2)" class="button slider-number number-2">2</span>
-            <span onclick="handleChangeSlider(3)" class="button slider-number number-3">3</span>
-            <span onclick="handleChangeSlider(4)" class="button slider-number number-4">4</span>
-            <span onclick="handleChangeSlider(5)" class="button slider-number number-5">5</span>
-        </div>
+        <span onclick="handleChangeSlider(-1,true)" class="button prv-button">
+            <</span> <div class="numbers">
+                <span onclick="handleChangeSlider(1)" class="button slider-number number-1">1</span>
+                <span onclick="handleChangeSlider(2)" class="button slider-number number-2">2</span>
+                <span onclick="handleChangeSlider(3)" class="button slider-number number-3">3</span>
+                <span onclick="handleChangeSlider(4)" class="button slider-number number-4">4</span>
+                <span onclick="handleChangeSlider(5)" class="button slider-number number-5">5</span>
+    </div>
     </div>
 
     <a class="header1">Meal by Categories</a>
@@ -155,14 +158,39 @@
 
 <!--Footer-->
 <footer class="footer">
-
-    <div class="links">
-        <a href="#">Link 1</a><br />
-        <a href="#">Link 1</a><br />
-        <a href="#">Link 1</a><br />
-        <a href="#">Link 1</a><br />
-        <a href="#">Link 1</a>
-    </div>
+    <table width="100%">
+        <tr>
+            <td>
+                <div class="links">
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a>
+                </div>
+                <div class="vertical-line"></div>
+            </td>
+            <td>
+                <div class="links">
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a>
+                </div>
+                <div class="vertical-line"></div>
+            </td>
+            <td>
+                <div class="links">
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a><br />
+                    <a href="#">Link 1</a>
+                </div>
+            </td>
+        </tr>
+    </table>
 
     <div class="socialbtn">
         <a href="#"><img src="images/socialbtn/001-facebook.svg"></a>
@@ -170,13 +198,10 @@
         <a href="#"><img src="images/socialbtn/003-instagram.svg"></a>
         <a href="#"><img src="images/socialbtn/004-google-plus.svg"></a>
     </div>
-
-    <div class="copyright">
-        <a> Copyright@mealcart</a>
-    </div>
+    <div class="copyright"><a>Copyright@mealcart</a></div>
 
 </footer>
-<script type="text/javascript" >
+<script type="text/javascript">
     slider();
 </script>
 <!--End of footer-->
