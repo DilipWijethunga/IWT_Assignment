@@ -1,0 +1,69 @@
+body{
+	background-image:url(../images/ccc.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+h1{
+	font-family: "Arial", times, serif;
+	font-size: 75px;
+	text-align: center;
+	margin:0;
+}
+
+h3{
+	font-family: "Arial", times, serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+div.a p{
+	font-family: "Arial", times, serif;
+	font-size: 20px;
+	text-align: center;
+	margin:0;
+}
+
+div.b{
+	margin:50px 150px;
+}
+div.b div.form{
+	float:left;
+	width:650px;
+}
+
+input , textarea{
+	padding:5px;
+	width:450px;
+	font-family:"Times new roman", serif;
+	border:none;
+	border-radius:5px;
+}
+
+button{
+	background:#A9A9A9;
+	color:white;
+	border:none;
+	border-radius:5px;
+	padding:10px 15px;
+	font-family:"Times new roman", serif;
+	
+}
+
+div.b div.info{
+	float:right;
+	
+	
+}
+
+div.info p{
+	padding:3px;
+
+}
+
+div.socialmedia ul{
+	list-style:none;
+}
+div.socialmedia ul li{
+	padding:10px;
+	display:inline-block;
+}	

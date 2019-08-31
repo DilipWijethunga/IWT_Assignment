@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/catamaran_cruises_blue_tropical_water_aerial_photography-wallpaper-1366x768.jpg")
+    background-image: url("../images/bbb.jpg")
 }
 
 .box{
@@ -7,10 +7,11 @@ body{
     position: relative;
 	height:500px;
 	width: 600px;
-	margin: 20% auto; 
+	
 	box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);	
     width:400px;
-    margin: auto
+    margin: auto;
+    margin-top:calc(50vh - 250px)
     
 }
 h1{
@@ -61,4 +62,11 @@ h1{
     margin-right:47px;
     float:right;
     color:red
+}
+
+.error{
+    color:red;
+    font-size: 15px;
+    text-align:center;
+    padding-right: 45px;
 }

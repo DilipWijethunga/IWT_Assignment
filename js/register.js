@@ -8,28 +8,47 @@ function validateTelephone() {
     }
 }
 
-function validateDob(){
-    var today = new Date();
-    var dob=document.getElementById("DOB").value;
-    if(parseInt(dob.substr(0,4))>today.getFullYear()){
-       document.getElementById("dobError").innerHTML="Please enter a valid date of birth.";
+
+function validateAge(){
+    var age=document.getElementById("Age").value;
+    if(age<=0){
+        document.getElementById("ageError").innerHTML="Please enter a valid age."
     }
     else{
-        document.getElementById("dobError").innerHTML="";
+        document.getElementById("ageError").innerHTML=""
+    }
+
+}
+
+function validatepassword(){
+    var password1=document.getElementById("pwd1").value;
+    var password2=document.getElementById("pwd2").value;
+    
+    if(password1==password2){
+        document.getElementById("passwordError").innerHTML=""
+    }
+    else{
+        document.getElementById("passwordError").innerHTML="Password confirmation doesn't match."
     }
 }
+
+
+
+
+
+
+
 
 function validateEmail(){
     var email=document.getElementById("email").value;
-    if(pattern="[a-z0-9._+-] +@[a-z]{5}+/.[a-z0-9]{3}"){
+    if(/^\S+@\S+$/.test(email)){
        document.getElementById("emailError").innerHTML="";
-       }
-else{
+    }
+    else{
         document.getElementById("emailError").innerHTML="Please enter a valid email address. example@email.com"
-}
+    }
 
 }
-
 
 
  

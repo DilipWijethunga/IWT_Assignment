@@ -4,6 +4,7 @@
         <link rel="stylesheet" type="text/css" href="css/register.css">
         <title>Register Page</title>
         <script src="js/register.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
 
     <body>
@@ -24,20 +25,22 @@
         Telephone:</label>
     <input type="tel" onchange="validateTelephone()" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
     <p id="telerror" class="error"></p>
-<label for="DOB">
-    Date of Birth:</label>
-<input type="date" onchange="validateDob" class="fix-width" name="DOB" id="DOB" ></input>
-<p id="dobError" class="error"></p>
+<label for="Age">
+    Age:</label>
+<input type="number" min="0" max="124" onchange="validateAge()" class="fix-width" name="Age" id="Age" ></input>
+<p id="ageError" class="error"></p>
 <label for="email">
     Email Address:</label>
-<input type="email" class="fix-width" name="email" id="email" pattern="[a-z0-9._+-] +@[a-z]{5}+/.[a-z0-9]{3}" required></input><br/><br/>
+<input type="email" onchange="validateEmail()" class="fix-width" name="email" id="email" required></input>
 <p id="emailError" class="error"></p>
 <label for="pwd1">
     Password:</label>
 <input type="password" class="fix-width" name="pwd1" placeholder="create a password" id="pwd1"></input><br/><br/>
 <label for="pwd2">
     Confirm Password:</label>
-<input type="password" class="fix-width" name="pwd2" placeholder="type password again" id="pwd2"></input><br/><br/>
+<input type="password" onchange="validatepassword()" class="fix-width" name="pwd2" placeholder="type password again" id="pwd2"></input>
+<p id="passwordError" class="error"></p>
+<br/><br/>
 </div>
 </div>
 
