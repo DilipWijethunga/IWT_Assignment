@@ -7,7 +7,51 @@
 	</head>
 
 	<body>
-		<div class ="a">
+        
+         <nav id="navbar">
+
+
+        <!--    Logo-->
+        <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
+
+
+        <a id="cname">Online Meal Cart</a>
+
+        <!--    Register and Login buttons-->
+        <div id="reglogin">
+            <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
+            <button id="login">
+                Login</button>
+        </div>
+
+        <div class="cart_user">
+            <img width="30" src="images/cart.svg" alt="cart">
+            <a href="#"><img width="40" src="images/account.svg" alt="cart"></a>
+        </div>
+
+        <!--    Navigation Bar-->
+        <div class="header-second-bar">
+            <div id="navlist">
+              
+                <a href="index.html">Home</a>
+                <a href="categories.html">Menu</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+                
+            </div>
+
+            <!-- Search Button-->
+            <div class="search">
+                <input type="text" placeholder="Search..." class="searcharea">
+                <a href="#"><img src="images/search.svg" class="searchbtn"> </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Put Your Content -->
+ 
+        <div class ="a">
 			<h1>CONTACT US</h1>
 			<hr>
 			<h3>We'd Love to Help!</h3>
@@ -16,11 +60,11 @@
 		<div class="b">
 			<div class="form">
 			 <form>
-				<input type = "text" name = "name" placeholder = "Name">
+				<input required type = "text" name = "name" placeholder = "Name">
 				<br><br>
-				<input type = "email" name = "email" placeholder = "E-mail">
+				<input required type = "email" name = "email" placeholder = "E-mail">
 				<br><br>
-				<textarea name = "text" placeholder = "Message" rows ="10" cols ="60"></textarea>
+				<textarea required name = "text" placeholder = "Message" rows ="10" cols ="60"></textarea>
 				<br><br>
 				<button type ="submit">SEND</button>
 
@@ -43,19 +87,50 @@
 					
 					</div>
 			</div>
+            
+              <!--Footer-->
+    <footer class="footer">
+        <table width="100%">
+            <tr>
+                <td width="33%">
+                    <div class="links">
+                        <a href="search_results.html">Search And Buy</a><br />
+                        <a href="register.html">Register</a><br />
+                        <a href="login.html">Login</a><br />
+                        <a href="aboutus.html">About Us</a><br />
+                    </div>
+                    <div class="vertical-line"></div>
+                </td>
+                <td width="33%">
+                    <div class="links">
+                        <strong>Contact Us</strong><br />
+                        <a href="mailto:info@mealcart.com">Email</a><br />
+                        <a href="mealcart.com">Web</a><br />
+                        <a href="google.com/news">News</a><br />
+                        <b>Visit Us:-</b><br />
+                        SLIIT,
+                        Malabe
+                    </div>
+                    <div class="vertical-line"></div>
+                </td>
+                <td width="33%">
+                    <img src="images/certificate.png" width="100" /><br />
+                    Organic food certificate. 2007
+                </td>
+            </tr>
+        </table>
+
+        <div class="socialbtn">
+            <a href="#"><img src="images/socialbtn/001-facebook.svg"></a>
+            <a href="#"><img src="images/socialbtn/002-twitter.svg"></a>
+            <a href="#"><img src="images/socialbtn/003-instagram.svg"></a>
+            <a href="#"><img src="images/socialbtn/004-google-plus.svg"></a>
+        </div>
+        <div class="copyright"><a>Copyright@mealcart</a></div>
+
+    </footer>
+    <!--End of footer-->
+
 	</body>
-
-	<footer>
-
-
-
-	</footer>
-
-
-
-
-
-
-
 
 </html>

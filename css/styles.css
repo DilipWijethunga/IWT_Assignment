@@ -28,7 +28,7 @@ body {
 #navbar {
   width: 100%;
   height: 140px;
-  background-image: url(../images/headerbcak.jpg);
+  background: #404040;
   text-align: center;
 }
 
@@ -107,26 +107,6 @@ a:active {
   list-style: none;
   padding: 0px;
   margin: 0px;
-}
-
-.menu-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.menu:hover .menu-content {
-  display: block;
-}
-
-.menu li,
-.menu li a {
-  padding: 0px !important;
-  margin: 0px !important;
 }
 
 .header-second-bar {
