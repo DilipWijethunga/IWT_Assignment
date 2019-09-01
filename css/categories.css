@@ -134,6 +134,11 @@ a:active {
     background:green;
     background-color: rgba(178,255,102,0.8);
 }
+
+.food-menu ul {
+  list-style: none;
+  padding: 0;
+}
 .table-format{
     margin: auto;
 }
