@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/register.css">
-        
-        <link rel="stylesheet" href="images/mas.jpg">
-        
-        <title>Register Page</title>
-        
-        <script src="js/register.js"></script>
-        
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    </head>
 
-    <body>
-        
-    
+<head>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+
+    <link rel="stylesheet" href="images/mas.jpg">
+
+    <title>Register Page</title>
+
+    <script src="js/register.js"></script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+
+
     <!-- Header -->
-    
+
     <nav id="navbar">
 
-        
+
         <!--    Logo-->
         <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
 
@@ -29,166 +30,178 @@
         <!--    Register and Login buttons-->
         <div id="reglogin">
             <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
-            <button id="login">
+            <button id="login" onclick="window.location.href='login.html'">
                 Login</button>
         </div>
-    
+
         <div class="cart_user">
-            <img width="30" src="images/cart.svg" alt="cart">
-            <a href="#"><img width="40" src="images/account.svg" alt="cart"></a>
+            <a href="#"><img width="30" src="images/cart.svg" alt="cart"></a>
+            <a href="user_profile.html"><img width="50" src="images/account.svg" alt="cart"></a>
         </div>
 
         <!--    Navigation Bar-->
         <div class="header-second-bar">
             <div id="navlist">
                 <a href="index.html">Home</a>
-                <ul class="menu">
-                    <a href="#">Menu</a>
-                    <div class="menu-content">
-                        <li><a href="#">Rice and Curry</a></li>
-                        <li><a href="#">Fried Rice</a></li>
-                        <li><a href="#">Lankan Foods</a></li>
-                        <li><a href="#">Chinese Foods</a></li>
-                        <li><a href="#">Indian Foods</a></li>
-                        <li><a href="#">Beverage</a></li>
-                        <li><a href="#">BBQ</a></li>
-                        <li><a href="#">menu2</a></li>
-                        <li><a href="#">menu3</a></li>
-                    </div>
-                </ul>
-                <a href="#">About Us</a>
-                <a href="#">Contact US</a>
+                <a href="categories.html">Menu</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
             </div>
 
             <!-- Search Button-->
             <div class="search">
                 <input type="text" placeholder="Search..." class="searcharea">
-                <a href="#"><img src="images/search.svg" class="searchbtn"> </a>
+                <a href="search_results.html"><img src="images/search.svg" class="searchbtn"> </a>
             </div>
         </div>
     </nav>
-    
-        
-<!-- REGISTER FORM -->
 
-        <form>
-            <div class="box">
-                <div class="align-center">
-<!--box Title-->
-                    <h4 class="box-title">Personal Information</h4><br/>
 
- <!-- Name  -->
-                <label for="firstname">        
+    <!-- REGISTER FORM -->
+
+    <form>
+        <div class="box">
+            <div class="align-center">
+                <!--box Title-->
+                <h4 class="box-title">Personal Information</h4><br />
+
+                <!-- Name  -->
+                <label for="firstname">
                     Name:</label>
-                <input type="text" class="fix-width" name="firstname" id="firstname" placeholder="First name"></input><br/><br/>
-              
- <!-- Gender-->
+                <input type="text" class="fix-width" name="firstname" id="firstname" placeholder="First name"></input><br /><br />
+
+                <!-- Gender-->
                 <label for="gender">
                     Gender:</label>
                 <input type="radio" name="gender" id="gender" value="male">Male</input>
-                <input type="radio" name="gender" value="female">Female</input><br/><br/>
-  
-<!--Telephone-->
+                <input type="radio" name="gender" value="female">Female</input><br /><br />
+
+                <!--Telephone-->
                 <label for="telno">
                     Telephone:</label>
                 <input type="tel" onchange="validateTelephone()" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
-                    
+
                 <p id="telerror" class="error"></p>
-    
-<!-- Age -->
+
+                <!-- Age -->
                 <label for="Age">
                     Age:</label>
-                <input type="number" min="0" max="124" onchange="validateAge()" class="fix-width" name="Age" id="Age" ></input>
+                <input type="number" min="0" max="124" onchange="validateAge()" class="fix-width" name="Age" id="Age"></input>
 
                 <p id="ageError" class="error"></p>
 
-<!--Email -->
+                <!--Email -->
                 <label for="email">
                     Email Address:</label>
                 <input type="email" onchange="validateEmail()" class="fix-width" name="email" id="email" required></input>
-                
+
                 <p id="emailError" class="error"></p>
 
-<!-- Password -->
+                <!-- Password -->
                 <label for="pwd1">
                     Password:</label>
-                <input type="password" class="fix-width" name="pwd1" placeholder="create a password" id="pwd1"></input><br/><br/>
+                <input type="password" class="fix-width" name="pwd1" placeholder="create a password" id="pwd1"></input><br /><br />
 
-<!--Confirm Password -->
+                <!--Confirm Password -->
                 <label for="pwd2">
                     Confirm Password:</label>
                 <input type="password" onchange="validatepassword()" class="fix-width" name="pwd2" placeholder="type password again" id="pwd2"></input>
 
                 <p id="passwordError" class="error"></p>
 
-                <br/><br/>
+                <br /><br />
 
-                </div>
+            </div>
         </div>
 
         <div class="box">
-                <div class="align-center">
-                <h4 class="box-title">Address Details</h4><br/>
+            <div class="align-center">
+                <h4 class="box-title">Address Details</h4><br />
 
-<!-- Address 1 -->
+                <!-- Address 1 -->
                 <label for="address1">
-        Address line one:</label>
-    <input type="text" class="fix-width" name="address1" id="address1"></input><br/><br/>
-<label for="address2">
-    Address line two:</label>
-<input type="text" class="fix-width" name="address2" id="address2"></input><br/><br/>
-<label for="town">
-    Town / City:</label>
-<input type="text" class="fix-width" name="town" id="town"></input><br/><br/>
-<label for="postcode">
-    Zip / Post code:</label>    
-<input type="text" class="fix-width" name="postcode" id="postcode"></input><br/><br/>
+                    Address line one:</label>
+                <input type="text" class="fix-width" name="address1" id="address1"></input><br /><br />
+                <label for="address2">
+                    Address line two:</label>
+                <input type="text" class="fix-width" name="address2" id="address2"></input><br /><br />
+                <label for="town">
+                    Town / City:</label>
+                <input type="text" class="fix-width" name="town" id="town"></input><br /><br />
+                <label for="postcode">
+                    Zip / Post code:</label>
+                <input type="text" class="fix-width" name="postcode" id="postcode"></input><br /><br />
 
 
-<button class="bttn1" type="submit">Sign Up</button><br/>
-</div>
-</div>
-<br/>
-<hr/>
-<div class="allign-text"><a>
-    OR</a>
-</div>
-<br/>
-<div class="social-login"><a href="#">
-    <img src="images/social/google.svg" alt="google account"/> </a>
-    <a href="#">
-<img src="images/social/facebook.svg" alt="facebook account"/></a>
-    <a href="#">
-<img src="images/social/twitter.svg" alt="twitter account"/>
-    </a>
+                <button class="bttn1" type="submit">Sign Up</button><br />
+            </div>
+        </div>
 
-</div>
+        <br />
 
+        <hr />
 
+        <div class="allign-text"><a>
+                OR</a>
+        </div>
 
+        <br />
 
+        <div class="social-login"><a href="#">
+                <img src="images/social/google.svg" alt="google account" /> </a>
+            <a href="#">
+                <img src="images/social/facebook.svg" alt="facebook account" /></a>
+            <a href="#">
+                <img src="images/social/twitter.svg" alt="twitter account" />
+            </a>
 
+        </div>
 
-
-
-
-</form>
+    </form>
 
 
+    <!--Footer-->
+    <footer class="footer">
+        <table width="100%">
+            <tr>
+                <td width="33%">
+                    <div class="links">
+                        <a href="search_results.html">Search And Buy</a><br />
+                        <a href="register.html">Register</a><br />
+                        <a href="login.html">Login</a><br />
+                        <a href="aboutus.html">About Us</a><br />
+                    </div>
+                    <div class="vertical-line"></div>
+                </td>
+                <td width="33%">
+                    <div class="links">
+                        <strong>Contact Us</strong><br />
+                        <a href="mailto:info@mealcart.com">Email</a><br />
+                        <a href="mealcart.com">Web</a><br />
+                        <a href="google.com/news">News</a><br />
+                        <b>Visit Us:-</b><br />
+                        SLIIT,
+                        Malabe
+                    </div>
+                    <div class="vertical-line"></div>
+                </td>
+                <td width="33%">
+                    <img src="images/certificate.png" width="100" /><br />
+                    Organic food certificate. 2007
+                </td>
+            </tr>
+        </table>
 
+        <div class="socialbtn">
+            <a href="#"><img src="images/socialbtn/001-facebook.svg"></a>
+            <a href="#"><img src="images/socialbtn/002-twitter.svg"></a>
+            <a href="#"><img src="images/socialbtn/003-instagram.svg"></a>
+            <a href="#"><img src="images/socialbtn/004-google-plus.svg"></a>
+        </div>
+        <div class="copyright"><a>Copyright@mealcart</a></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+    </footer>
+    <!--End of footer-->
 
 
 
@@ -200,4 +213,5 @@
 
 
 </body>
+
 </html>
