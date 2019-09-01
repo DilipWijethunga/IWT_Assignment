@@ -1,25 +1,24 @@
-body{
-    background-image: url("../images/mas.jpg");
-    background-size:cover;
-    background-position: center;
-    margin:0
+body {
+  background-color: #ffffff;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Header Styles */
 
 #logo {
-  width: 150px;
+  width: 130px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 4px;
+  left: 4px;
   z-index: 100;
 }
 
-.cart_user{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    fill:green;
+.cart_user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  fill: green;
 }
 
 #reglogin {
@@ -141,73 +140,68 @@ a:active {
   position: relative;
 }
 
-/*end of the header*/
-
-
-.box{
-    background-color: rgba(192,192,192,0.8);
-    border:dotted 2px blue;
-    padding: 15px;
-    margin:auto;
-    width:500px;
-    margin-top: 50px;
-    
-}
-.box-title{
-    padding:0px;
-    margin: 0px;
-    background: white;
-    margin-top: -24px;
-    width:160px;
-    padding-left: 8px;
-}
-label{
-    display:inline-block;
-    width: 300px;
-}
-.fix-width{
-    border-radius: 4px;
-    width:150px;
+#cname {
+  color: #c1d72e;
+  font-family: cursive;
+  font-size: 50px;
 }
 
-.bttn1{
-    margin-left: 200px;
-    padding:8px;
-    font-size:1.2em;
-    background: #00e600;
-    border:0;
-    border-radius:4px;
-    color:#fff;
-    cursor: pointer
-}
-.other{
-    margin-left: 200px;
-}
-.allign-text{
-    text-align: center;
-   margin-top: -18px;
-}
-.allign-text a{
-    background: white;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-.social-login img{
-    width: 24px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.social-login {
-    text-align: center
-    
-}
-.error{
-    color:red;
-    font-size: 10px;
-    text-align:right;
-    padding-right: 45px;
-}
+
+/** Contents **/
 
 
 
 
+/* Footer */
+
+.footer {
+  position: absolute;
+  border: 0;
+  top: 700px;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #cdd0ce;
+}
+
+.links {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.socialbtn {
+  margin-right: 0px;
+  margin-top: -40px;
+}
+
+footer .socialbtn img {
+  position: relative;
+  float: right;
+  width: 50px;
+  bottom: 100px;
+  padding: 5px;
+}
+
+.footer .copyright {
+  width: 100%;
+  margin-top: 32px;
+  border-top: solid 1px rgba(48, 22, 4, 0.4);
+  text-align: center;
+  padding-top: 8px;
+}
+
+.footer td {
+  position: relative;
+  padding: 8px;
+}
+
+.footer td .vertical-line {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background: rgba(48, 22, 4, 0.4);
+  right: 16px;
+  top: 0;
+  border-radius: 100%;
+}
