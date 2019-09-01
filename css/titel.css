@@ -1,5 +1,8 @@
 body {
-  background-color: #d5e7fc;
+    background-image: url("../images/bbb.jpg");
+    background-size:cover;
+    background-position: center;
+    margin:0
 }
 
 /* Header Styles */
@@ -127,5 +130,15 @@ a:active {
   font-size: 50px;
 }
 td{
-    vertical-align: top
+    vertical-align: top;
+    padding:10px;
+    background:green;
+    background-color: rgba(178,255,102,0.8);
+}
+.table-format{
+    margin: auto;
+}
+.tbl-center{
+    padding: 0 10vw;
+margin-top: 100px; 
 }

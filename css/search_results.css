@@ -1,7 +1,8 @@
 body{
-    background-image:url(../images/bbb.jpg);
+    background-image:url(../images/23.jpg);
     background-size:cover;
-    margin: 0;   
+    margin: 0;
+    background-size: cover;
 }
 
 
@@ -189,8 +190,7 @@ width: 300px;
     padding-bottom: 10px;
     vertical-align: top;
     padding:10px;
-    background:green;
-    background-color: rgba(15,260,102,0.6);
+    background-color: rgba(192,192,192,0.5);
 }
 
 .product-buy{
@@ -200,12 +200,12 @@ width: 300px;
 
 
 .head{
-    font-size: 22px;
+    font-size: 20px;
     font-family: sans-serif;
 }
 
 .head{
-    width: 200px;
+    width: 300px;
     
 }
 .photo{
@@ -224,6 +224,8 @@ width: 300px;
     min-width: 5px;
     display: inline-block;
     cursor: pointer;
+    border-radius: 5px;
+    background-color: darkseagreen;
 }
 .categories{
     position: sticky;
