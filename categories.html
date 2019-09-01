@@ -1,17 +1,20 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-	<title>Categories List</title>
-    <link rel="stylesheet" type="text/css" href="css/titel.css">
- 
+    <title>Categories List</title>
+    <link rel="stylesheet" type="text/css" href="css/categories.css">
+
 </head>
+
 <body>
 
 
-<nav id="navbar">
+   <nav id="navbar">
+
 
         <!--    Logo-->
-        <a href="#"><img src="images/coffee-time-png_91570.png" alt="logo" id="logo"> </a>
+        <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
 
 
         <a id="cname">Online Meal Cart</a>
@@ -20,98 +23,127 @@
         <div id="reglogin">
             <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
             <button id="login">
-                Login
-            </button>
-            <img width="16" src="images/cart.svg" alt="cart">
+                Login</button>
+        </div>
+
+        <div class="cart_user">
+            <a href="#"><img width="30" src="images/cart.svg" alt="cart"></a>
+            <a href="user_profile.html"><img width="50" src="images/account.svg" alt="cart"></a>
         </div>
 
         <!--    Navigation Bar-->
         <div class="header-second-bar">
             <div id="navlist">
                 <a href="index.html">Home</a>
-                <ul class="menu">
-                    <a href="#">Menu</a>
-                    <div class="menu-content">
-                        <li><a href="#">Rice and Curry</a></li>
-                        <li><a href="#">Fried Rice</a></li>
-                        <li><a href="#">Lankan Foods</a></li>
-                        <li><a href="#">Chinese Foods</a></li>
-                        <li><a href="#">Indian Foods</a></li>
-                        <li><a href="#">Beverage</a></li>
-                        <li><a href="#">BBQ</a></li>
-                        <li><a href="#">menu2</a></li>
-                        <li><a href="#">menu3</a></li>
-                    </div>
-                </ul>
-                <a href="#">Outlets</a>
-                <a href="#">Offers</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact US</a>
+                <a href="categories.html">Menu</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
             </div>
 
             <!-- Search Button-->
             <div class="search">
                 <input type="text" placeholder="Search..." class="searcharea">
-                <a href="#"><img src="images/search.svg" class="searchbtn"> </a>
+                <a href="search_results.html"><img src="images/search.svg" class="searchbtn"> </a>
             </div>
         </div>
-</nav>
-    
-<div class="tbl-center">    
-<table width="100%" class="table-format">
-    <tr>
-        <td>
-           <h3>RICE</h3>
-            <ul>
-                <li> <a href="#">01.Chicken Fried Rice</a> </li>
-                <li> <a href="#">02.Fish Fried Rice</a> </li>
-                <li> <a href="#">03.Egg Fried Rice</a> </li>
-                <li> <a href="#">04.Vegetable Fried</a>Rice </a></li> 
-                <li> <a href="#">05.Rice With Chicken</a> </li>
-                <li> <a href="#">06.Rice with Fish </a></li>
-                <li> <a href="#">07.Rice With Egg</a></li>
-                <li> <a href="#">08.Rice with Curry</a></li>    
-            </ul>
-        </td>
-        
-        <td>
-           <h3>Noodles</h3>
-            <ul>
-                <li> 01.Chicken Noodles </li>
-                <li> 02.Vegetable Noodles with fish </li>
-                <li> 03.Vegetable Noodles with egg</li>
-                <li> 04.Vegetable Noodles  </li>
-                <li> 05.Mix Noodles </li>
-            </ul>
-        </td>   
-    
-        <td>
-           <h3>Pasta</h3>
-            <ul>
-                <li> 01.Chicken Pasta</li>
-                <li> 02.Vegetable Pasta </li>
-                <li> 03.Seafood Pasta </li>
-                <li> 04.Vegetable Noodles  </li>
-                <li> 05.Mix Noodles </li>
-            </ul>
-        </td>
-        
-         <td>
-           <h3>Dessert</h3>
-            <ul>
-                <li> 01.Chocolate ice cream</li>
-                <li> 02.Vanilla ice cream</li>
-                <li> 03.Vatalappan </li>
-                <li> 04.Chocolate mousse</li>
-                <li> 05.Buscuit pudding</li>
-                <li> 06.Fresh fruit salald</li>
-                <li> 07.Fresh fruit salad with ice cream</li>
-                                          
-            </ul>
-        </td>            
-    </tr>        
-</table>
-</div>
+    </nav>
+
+    <div class="tbl-center">
+        <table width="100%" class="table-format">
+            <tr>
+                <td class="food-menu">
+                    <h3>RICE</h3>
+                    <ul>
+                        <li> <a href="#">01.Chicken Fried Rice</a> </li>
+                        <li> <a href="#">02.Fish Fried Rice</a> </li>
+                        <li> <a href="#">03.Egg Fried Rice</a> </li>
+                        <li> <a href="#">04.Vegetable Fried</a>Rice </a></li>
+                        <li> <a href="#">05.Rice With Chicken</a> </li>
+                        <li> <a href="#">06.Rice with Fish </a></li>
+                        <li> <a href="#">07.Rice With Egg</a></li>
+                        <li> <a href="#">08.Rice with Curry</a></li>
+                    </ul>
+                </td>
+
+                <td class="food-menu">
+                    <h3>Noodles</h3>
+                    <ul>
+                        <li> 01.Chicken Noodles </li>
+                        <li> 02.Vegetable Noodles with fish </li>
+                        <li> 03.Vegetable Noodles with egg</li>
+                        <li> 04.Vegetable Noodles </li>
+                        <li> 05.Mix Noodles </li>
+                    </ul>
+                </td>
+
+                <td class="food-menu">
+                    <h3>Pasta</h3>
+                    <ul>
+                        <li> 01.Chicken Pasta</li>
+                        <li> 02.Vegetable Pasta </li>
+                        <li> 03.Seafood Pasta </li>
+                        <li> 04.Vegetable Noodles </li>
+                        <li> 05.Mix Noodles </li>
+                    </ul>
+                </td>
+
+                <td class="food-menu">
+                    <h3>Dessert</h3>
+                    <ul>
+                        <li> 01.Chocolate ice cream</li>
+                        <li> 02.Vanilla ice cream</li>
+                        <li> 03.Vatalappan </li>
+                        <li> 04.Chocolate mousse</li>
+                        <li> 05.Buscuit pudding</li>
+                        <li> 06.Fresh fruit salald</li>
+                        <li> 07.Fresh fruit salad with ice cream</li>
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<footer class="footer">
+    <table width="100%">
+        <tr>
+            <td width="33%">
+                <div class="links">
+                    <a href="search_results.html">Search And Buy</a><br />
+                    <a href="register.html">Register</a><br />
+                    <a href="login.html">Login</a><br />
+                    <a href="aboutus.html">About Us</a><br />
+                </div>
+                <div class="vertical-line"></div>
+            </td>
+            <td width="33%">
+                <div class="links">
+                    <strong>Contact Us</strong><br />
+                    <a href="mailto:info@mealcart.com">Email</a><br />
+                    <a href="mealcart.com">Web</a><br />
+                    <a href="google.com/news">News</a><br />
+                    <b>Visit Us:-</b><br />
+                    SLIIT,
+                    Malabe
+                </div>
+                <div class="vertical-line"></div>
+            </td>
+            <td width="33%">
+                <img src="images/certificate.png" width="100" /><br />
+                Organic food certificate. 2007
+            </td>
+        </tr>
+    </table>
+
+    <div class="socialbtn">
+        <a href="#"><img src="images/socialbtn/001-facebook.svg"></a>
+        <a href="#"><img src="images/socialbtn/002-twitter.svg"></a>
+        <a href="#"><img src="images/socialbtn/003-instagram.svg"></a>
+        <a href="#"><img src="images/socialbtn/004-google-plus.svg"></a>
+    </div>
+    <div class="copyright"><a>Copyright@mealcart</a></div>
+
+</footer>
 </body>
 
 </html>
