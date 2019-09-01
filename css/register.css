@@ -15,23 +15,24 @@ body{
   z-index: 100;
 }
 
+.cart_user{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    fill:green;
+}
+
 #reglogin {
   position: absolute;
-  right: 45px;
-  top: 20px;
+  right: 100px;
+  top: 25px;
 }
 
 #navbar {
   width: 100%;
   height: 140px;
-  background-color: #00e600;
+  background: #404040;
   text-align: center;
-}
-
-
-#cname {
-  font-family: cursive;
-  font-size: 50px;
 }
 
 .header1 {
@@ -48,7 +49,7 @@ body{
 
 #reglogin button,
 login {
-  background-color: lawngreen;
+  background-color: #c1d72e;
   border: none;
   border-radius: 3px;
   padding: 5px;
@@ -69,7 +70,7 @@ login {
 }
 
 .searcharea {
-  background-color: greenyellow;
+  background-color: #c1d72e;
   border: none;
   width: 250px;
   height: 30px;
