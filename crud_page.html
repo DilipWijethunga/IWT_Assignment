@@ -46,8 +46,8 @@
             </ul>
             <ul class="header-menu">
                 <a href="#">
-                    <img class="header-user" src="images/account.svg" alt="account icon" />
-                    <img class="header-user" src="images/dropdown.svg" alt="dropdown down icon" />
+                    <img width="32" class="header-user" src="images/account.svg" alt="account icon" />
+                    <img width="32" class="header-user" src="images/dropdown.svg" alt="dropdown down icon" />
                 </a>
                 <div class="menu-items">
                     <li>
@@ -160,7 +160,7 @@
     <div id="popup" class="overlay hidden">
         <div class="popup">
             <div class="paper">
-                <form onsubmit="return submit(event)">
+                <form onsubmit="submit(event)">
                     <h3 class="paper-title"><span class="mode">Create</span> Products</h3>
                     <hr class="divider" />
                     <div class="form-control">
@@ -218,7 +218,7 @@
                     <hr class="divider" />
                     <div class="form-buttons-right">
                         <button onclick="hideOverlay()" class="button red">Cancel</button>
-                        <button onclick="snack('Successfully updated your record', 'message', 'green');" type="submit" class="button green"> <span class="mode">Create</span></button>
+                        <button type="submit" class="button green"> <span class="mode">Create</span></button>
                     </div>
                 </form>
             </div>
