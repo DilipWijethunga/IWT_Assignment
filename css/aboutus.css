@@ -1,0 +1,35 @@
+body{
+	background-image:url(../images/ccc.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+div.c h1{
+	font-family: "Arial", times, serif;
+	font-size: 75px;
+	text-align: center;
+	margin:0;
+}
+
+div.introtext p{
+	font-family:"Arial", times, serif;
+	font-size: 25px;
+	text-align: center; 
+	padding: 35px;
+}	
+
+div.content{
+    width: 1500px;
+}
+
+div.content-col{
+    margin-left: 70px;
+    width: 400px;
+    height: 200px;
+    float: left;
+    background: #bbb;
+}
+
+div.content-col h2{
+    text-align: center;
+}
