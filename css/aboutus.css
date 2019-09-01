@@ -23,11 +23,13 @@ div.content{
 }
 
 div.content-col{
+        background-color: rgba(192,192,192,0.1);
+    box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);	
     margin-left: 70px;
     width: 400px;
     height: 200px;
     float: left;
-    background: #bbb;
+
 }
 
 div.content-col h2{
