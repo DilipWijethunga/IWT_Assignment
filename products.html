@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Online Meal Cart</title>
-    
+    <title>Online Meal Cart</title>
+
     <script src="js/product.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/products.css">
 </head>
 
-    
-<body>
-    
-<nav id="navbar">
 
-        
+<body>
+
+    <nav id="navbar">
+
+
         <!--    Logo-->
         <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
 
@@ -27,7 +28,7 @@
             <button id="login">
                 Login</button>
         </div>
-    
+
         <div class="cart_user">
             <img width="30" src="images/cart.svg" alt="cart">
             <a href="#"><img width="40" src="images/account.svg" alt="cart"></a>
@@ -37,20 +38,9 @@
         <div class="header-second-bar">
             <div id="navlist">
                 <a href="index.html">Home</a>
-                <ul class="menu">
-                    <a href="#">Menu</a>
-                    <div class="menu-content">
-                        <li><a href="#">Rice and Curry</a></li>
-                        <li><a href="#">Fried Rice</a></li>
-                        <li><a href="#">Lankan Foods</a></li>
-                        <li><a href="#">Chinese Foods</a></li>
-                        <li><a href="#">Indian Foods</a></li>
-                        <li><a href="#">Beverage</a></li>
-                        <li><a href="#">BBQ</a></li>
-                        <li><a href="#">menu2</a></li>
-                        <li><a href="#">menu3</a></li>
-                    </div>
-                </ul>
+
+                <a href="#">Menu</a>
+
                 <a href="#">About Us</a>
                 <a href="#">Contact US</a>
             </div>
@@ -62,93 +52,96 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="prodctable">
-    <table class="prodtable">
-        
-        <colgroup>
-            <col class="one">
-            <col class="two">
-            <col class="three">
-            
-        </colgroup>
-        
-        <!--Category-->
-       <td class="prodct">
-            
-           <a><b>Categories</b></a><br/><br/>
-           <a href="#">+ Rice and Curry</a><br/>
-           <a href="#">+ Chicken</a><br/>
-           <a href="#">+ Fried Rice</a><br/>
-           <a href="#">+ Nasigurang</a><br/>
-           <a href="#">+ Noodles</a><br/>
-           <a href="#">+ Short eats</a><br/>
-           <a href="#">+ Sweets</a><br/>
-           <a href="#">+ more</a><br/>
-           <a href="#">+ more</a><br/>
-           <a href="#">+ more</a><br/>
-           <!--Category-->
-        
-        </td>
-        <td class="space"></td>
-        
-        <!--Item Image and Description-->
+        <table class="prodtable">
+
+            <colgroup>
+                <col class="one">
+                <col class="two">
+                <col class="three">
+
+            </colgroup>
+
+            <!--Category-->
+            <td class="prodct">
+
+                <a><b>Categories</b></a><br /><br />
+                <a href="#">+ Rice and Curry</a><br />
+                <a href="#">+ Chicken</a><br />
+                <a href="#">+ Fried Rice</a><br />
+                <a href="#">+ Nasigurang</a><br />
+                <a href="#">+ Noodles</a><br />
+                <a href="#">+ Short eats</a><br />
+                <a href="#">+ Sweets</a><br />
+                <a href="#">+ more</a><br />
+                <a href="#">+ more</a><br />
+                <a href="#">+ more</a><br />
+                <!--Category-->
+
+            </td>
+            <td class="space"></td>
+
+            <!--Item Image and Description-->
             <td class="price">
-            <div>
-                <img src="images/food_menu/chickenfrice.jpg">
-                <a>LKR 250.00</a>            </div></td>
-        <td class="space2" ></td>
-                
-            <div class="descrcarea"><td  class="pdescript">
-                <div class="title"><a>Chicken Fried Rice</a></div>
-                <div class="descrpt"><a>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters </a></div>
-                
-                <div class="buycart">
-        <div class="quantity">
-            <button input="button" onclick="decreaseValue()">-</button> 
-            
-            <input type="text" class="quanvalue" value="1" id="number">
-            
-            <button input="button" id="quantplus" onclick="increaseValue()">+</button>
-            
-            <button input="button" class="regorlarg">Regular</button>
-            <button input="button" class="regorlarg">Large</button><br/>
-        </div>
-        
-        
-            <button input="button">Buy Now</button>
-            <button input="button">Add to Cart</button>
-                
-            <td width="100%" class="space"></td>
-            <td class="pricearea"></td>
-                
-                
-<!-- buy now, add to cart section -->
-                
-    </td></div>
- <!--End of item Image and Description-->
-     </div>
-        
-       
-        
-        </tr>
-        
+                <div>
+                    <img src="images/food_menu/chickenfrice.jpg">
+                    <a>LKR 250.00</a> </div>
+            </td>
+            <td class="space2"></td>
+
+            <div class="descrcarea">
+                <td class="pdescript">
+                    <div class="title"><a>Chicken Fried Rice</a></div>
+                    <div class="descrpt"><a>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters </a></div>
+
+                    <div class="buycart">
+                        <div class="quantity">
+                            <button input="button" onclick="decreaseValue()">-</button>
+
+                            <input type="text" class="quanvalue" value="1" id="number">
+
+                            <button input="button" id="quantplus" onclick="increaseValue()">+</button>
+
+                            <button input="button" class="regorlarg">Regular</button>
+                            <button input="button" class="regorlarg">Large</button><br />
+                        </div>
+
+
+                        <button input="button">Buy Now</button>
+                        <button input="button">Add to Cart</button>
+
+                <td width="100%" class="space"></td>
+                <td class="pricearea"></td>
+
+
+                <!-- buy now, add to cart section -->
+
+                </td>
+            </div>
+            <!--End of item Image and Description-->
+    </div>
+
+
+
+    </tr>
+
     </table>
     </div>
-    
+
     <span class="suggestion">
-            
-            <div class="thumbnail" style="background-image:url(images/food_menu/dessert.jpeg)" ></div> 
-            <div class="thumbnail" style="background-image:url(images/food_menu/bbq.jpg)" ></div>
-            <div class="thumbnail" style="background-image:url(images/food_menu/d.jpg)" ></div>
-            <div class="thumbnail" style="background-image:url(images/food_menu/chickenfrice.jpg)" ></div>
-            <div class="thumbnail" style="background-image:url(images/food_menu/image.jpg)"></div>
-            <div class="thumbnail" style="background-image:url(images/food_menu/bbq.jpg)" ></div>
-            <div class="thumbnail" style="background-image:url(images/food_menu/bbq.jpg)" ></div>
+
+        <div class="thumbnail" style="background-image:url(images/food_menu/dessert.jpeg)"></div>
+        <div class="thumbnail" style="background-image:url(images/food_menu/bbq.jpg)"></div>
+        <div class="thumbnail" style="background-image:url(images/food_menu/d.jpg)"></div>
+        <div class="thumbnail" style="background-image:url(images/food_menu/chickenfrice.jpg)"></div>
+        <div class="thumbnail" style="background-image:url(images/food_menu/image.jpg)"></div>
+        <div class="thumbnail" style="background-image:url(images/food_menu/bbq.jpg)"></div>
+        <div class="thumbnail" style="background-image:url(images/food_menu/bbq.jpg)"></div>
     </span>
-    
+
 </body>
-    
+
 <!--Footer-->
 <footer class="footer">
     <table width="100%">
@@ -162,20 +155,20 @@
                 </div>
                 <div class="vertical-line"></div>
             </td>
-            <td width="33%" >
+            <td width="33%">
                 <div class="links">
-                    <strong>Contact Us</strong><br/>
+                    <strong>Contact Us</strong><br />
                     <a href="mailto:info@mealcart.com">Email</a><br />
                     <a href="mealcart.com">Web</a><br />
                     <a href="google.com/news">News</a><br />
-                    <b>Visit Us:-</b><br/>
+                    <b>Visit Us:-</b><br />
                     SLIIT,
                     Malabe
                 </div>
                 <div class="vertical-line"></div>
             </td>
-            <td width="33%" >
-                <img src="images/certificate.png" width="100"/><br/>
+            <td width="33%">
+                <img src="images/certificate.png" width="100" /><br />
                 Organic food certificate. 2007
             </td>
         </tr>
@@ -191,4 +184,5 @@
 
 </footer>
 <!--End of footer-->
+
 </html>
