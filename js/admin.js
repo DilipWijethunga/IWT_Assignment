@@ -27,12 +27,15 @@ function showOverlay(mode) {
 
   popup.setAttribute("class", "overlay");
 
-  imageInput = document.getElementById('productImage').parentElement;
+  imageInput = document.getElementById("productImage");
+  imageInputParent = imageInput.parentElement;
 
-  if(mode!='Search'){
-    imageInput.setAttribute('class','form-control form-control-image');
+  if (mode != "Search") {
+    imageInputParent.setAttribute("class", "form-control form-control-image");
+    imageInput.required = false;
   } else {
-    imageInput.setAttribute('class','hidden');
+    imageInputParent.setAttribute("class", "hidden");
+    imageInput.required = true;
   }
 
   var elements = document.getElementsByClassName("mode");
@@ -50,8 +53,8 @@ function hideOverlay() {
 
 function submit(e) {
   e.preventDefault();
-  
-  hideOverlay();
 
-  return false;
+  snack("Successfully updated your record", "message", "green");
+
+  hideOverlay();
 }
