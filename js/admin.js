@@ -32,10 +32,10 @@ function showOverlay(mode) {
 
   if (mode != "Search") {
     imageInputParent.setAttribute("class", "form-control form-control-image");
-    imageInput.required = false;
+    imageInput.required = true;
   } else {
     imageInputParent.setAttribute("class", "hidden");
-    imageInput.required = true;
+    imageInput.required = false;
   }
 
   var elements = document.getElementsByClassName("mode");
