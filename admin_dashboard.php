@@ -59,7 +59,7 @@
                         <hr>
                     </li>
                     <li>
-                        <a href="admin_login.html">Logout</a>
+                        <a href="logout.php">Logout</a>
                     </li>
                 </div>
             </ul>
