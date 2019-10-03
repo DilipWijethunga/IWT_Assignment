@@ -8,7 +8,7 @@ function snack(message, type, color) {
     message +
     '<div class="form-buttons-right">' +
     (type == "confirm"
-      ? "<button onclick=\"snack( 'You have successfully completed your message.','message','green' );hideSnack(event)\" class=\"snack-button red\">Yes</button>"
+      ? "<button onclick=\"snack( 'You have successfully completed your action.','message','green' );hideSnack(event)\" class=\"snack-button red\">Yes</button>"
       : "") +
     '<button onclick="hideSnack(event)" class="snack-button green">Cancel</button>' +
     "</div>";
