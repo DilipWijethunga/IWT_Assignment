@@ -25,10 +25,11 @@ if(isset($_SESSION['user_id'])){
 
     // Getting the user details from the database
     $query = $db->query("SELECT * FROM users WHERE u_id=$user_id ; ");
-
-    $user= $query->fetch_assoc($query);
-
-    if(!$user){
-        session_destroy();
+    if($query){
+        $user= $query->fetch_assoc();
+        if(!$user){
+            session_destroy();
+        }
     }
+
 }

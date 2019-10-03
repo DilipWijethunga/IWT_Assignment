@@ -36,10 +36,10 @@ if(isset($_POST['submit'])){
         \"{$_POST['address1']}\",
         \"{$_POST['address2']}\",
         \"{$_POST['town']}\",
-        \"Cust\",
+        \"cust\",
         \"{$_POST['postcode']}\",
         NULL,
-        \"NoConf\"
+        \"noconf\"
     ) ;";
 
     $result = $db->query($sql);
