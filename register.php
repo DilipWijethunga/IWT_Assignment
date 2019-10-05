@@ -1,3 +1,59 @@
+<?php
+require_once "init.php";
+
+
+// Redirecting to home page if user is already logged in.
+if($user){
+    header("Location: index.php");
+    die;
+}
+
+// Inserting to the database after form submit.
+if(isset($_POST['submit'])){
+    $password = md5($_POST['pwd1']);
+    $sql = 
+    "INSERT INTO users (
+        u_name,
+        u_gender,
+        u_tel,
+        u_age,
+        u_email,
+        u_password,
+        u_address_1,
+        u_address_2,
+        u_town,
+        u_type,
+        u_zip,
+        u_email_verify_token,
+        u_status
+    ) VALUES (
+        \"{$_POST['firstname']}\",
+        \"{$_POST['gender']}\",
+        \"{$_POST['tel']}\",
+        \"{$_POST['age']}\",
+        \"{$_POST['email']}\",
+        \"{$password}\",
+        \"{$_POST['address1']}\",
+        \"{$_POST['address2']}\",
+        \"{$_POST['town']}\",
+        \"cust\",
+        \"{$_POST['postcode']}\",
+        NULL,
+        \"noconf\"
+    ) ;";
+
+    $result = $db->query($sql);
+
+    if($result){
+        header("Location: index.php");
+        die;
+    } else {
+        // Handle your error
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -59,7 +115,7 @@
 
     <!-- REGISTER FORM -->
 
-    <form>
+    <form method="POST">
         <div class="box">
             <div class="align-center">
                 <!--box Title-->
@@ -73,20 +129,20 @@
                 <!-- Gender-->
                 <label for="gender">
                     Gender:</label>
-                <input type="radio" name="gender" id="gender" value="male">Male</input>
-                <input type="radio" name="gender" value="female">Female</input><br /><br />
+                <input type="radio" name="gender" id="gender" value="M">Male</input>
+                <input type="radio" name="gender" value="F">Female</input><br /><br />
 
                 <!--Telephone-->
                 <label for="telno">
                     Telephone:</label>
-                <input type="tel" onchange="validateTelephone()" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
+                <input type="tel" onchange="validateTelephone()" class="fix-width" name="tel" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
 
                 <p id="telerror" class="error"></p>
 
                 <!-- Age -->
                 <label for="Age">
                     Age:</label>
-                <input type="number" min="0" max="124" onchange="validateAge()" class="fix-width" name="Age" id="Age"></input>
+                <input type="number" min="0" max="124" onchange="validateAge()" class="fix-width" name="age" id="Age"></input>
 
                 <p id="ageError" class="error"></p>
 
@@ -133,7 +189,7 @@
                 <input type="text" class="fix-width" name="postcode" id="postcode"></input><br /><br />
 
 
-                <button class="bttn1" type="submit">Sign Up</button><br />
+                <button class="bttn1" name="submit" type="submit">Sign Up</button><br />
             </div>
         </div>
 
