@@ -213,7 +213,8 @@ h1 {
 .forgot {
     margin-right: 47px;
     float: right;
-    color: red !important
+    color: red;
+	cursor: pointer;
 }
 
 .error {
