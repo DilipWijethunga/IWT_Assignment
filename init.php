@@ -20,7 +20,9 @@ if($db->connect_error){
 // Checking the logged user credentials
 $user = null;
 
+
 if(isset($_SESSION['user_id'])){
+
     $user_id = $_SESSION['user_id'];
 
     // Getting the user details from the database
@@ -32,4 +34,14 @@ if(isset($_SESSION['user_id'])){
         }
     }
 
+} else if(isset($_COOKIE['remember_token'])){
+
+    $remember_token = $_COOKIE['remember_token'];
+
+    $user= $db->query("SELECT * FROM users WHERE u_remember_token='$remember_token' LIMIT 1")->fetch_assoc();
+
+    if(!$user){
+        $_COOKIE['remember_token'] = null;
+    }
 }
+

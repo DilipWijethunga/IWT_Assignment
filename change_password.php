@@ -1,3 +1,41 @@
+<?php
+require_once "init.php";
+
+if(!$user){
+    header("Location:- login.php");
+    die;
+}
+
+$error = null;
+
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $last_password = $_POST['last_password'];
+    $new_password = $_POST['new_password'];
+    $confirm_password = $_POST['confirm_password'];
+
+    if($email==$user['u_email']){
+        if(md5($last_password)==$user['u_password']){
+
+            if($new_password==$confirm_password){
+                $password = md5($new_password);
+                $db->query("UPDATE users SET u_password='$password'");
+
+                header("Location: logout.php");
+                die;
+            } else {
+                $error = "New passwords not matching";
+            }
+
+        } else {
+            $error = "Incorrect password supplied for old password field.";
+        }
+    } else {
+        $error = "Entered email is not matching with old email";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -35,7 +73,7 @@
                 Login</button>
         </div>
 
-        <<div class="cart_user">
+        <div class="cart_user">
             <a href="#"><img width="30" src="images/cart.svg" alt="cart"></a>
             <a href="user_profile.html"><img width="50" src="images/account.svg" alt="cart"></a>
             </div>
@@ -60,20 +98,27 @@
 
     <!--Login form-->
 
-    <form action="index.html" onsubmit="return validateEmail()">
+    <form method="POST" onsubmit="return validateEmail()">
         <div class="box">
             <h1>Change Password</h1><br />
 
+            <?php
+            if($error)  {
+                ?>
+                <p id="emailError" class="error"><?php echo $error; ?></p>
+                <?php
+            }
+            ?>
 
 			 <input type="email" onchange="validateEmail()" class="text-box" name="email" id="email" placeholder="Email Address" required></input>
 
              <p id="emailError" class="error"></p>
 
-            <input type="password" class="text-box" name="password" id="password" placeholder="Last Password" required></input></p>
+            <input type="password" class="text-box" name="last_password" id="last_password" placeholder="Last Password" required></input></p>
 			
-			<input type="password" class="text-box" name="password" id="password" placeholder="New Password" required></input></p>
+			<input type="password" class="text-box" name="new_password" id="new_password" placeholder="New Password" required></input></p>
 			
-			<input type="password" class="text-box" name="password" id="password" placeholder="Confirm Password" required></input></p>
+			<input type="password" class="text-box" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required></input></p>
            
 
             <div class="formatting">
@@ -84,7 +129,7 @@
 
             <br /><br />
 
-            <button class="bttn1" type="submit" onclick="window.location.href='user_profile.html'">Reset Password</button><br /><br /><br />
+            <button class="bttn1" name="submit" value="submit" type="submit" onclick="window.location.href='user_profile.html'">Reset Password</button><br /><br /><br />
 
            
 

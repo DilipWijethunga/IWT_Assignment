@@ -1,3 +1,12 @@
+<?php
+require_once "init.php";
+
+if(!$user){
+    header("Location: login.php");
+    die;
+}
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -88,7 +97,7 @@
                 <div class="secondcol"><a>Full Name:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">Ashan Perera</div>
+                <div class="text-format"><?php echo $user['u_name']; ?></div>
 
             </td>
         </tr>
@@ -102,7 +111,7 @@
                 <div class="secondcol"><a>Gender:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">Male</div>
+                <div class="text-format"><?php echo $user['u_gender']=="M"?"Male":"Female"; ?></div>
 
             </td>
         </tr>
@@ -115,7 +124,7 @@
                 <div class="secondcol"><a>Phone Number:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">0774473352</div>
+                <div class="text-format"><?php echo $user['u_tel']; ?></div>
 
             </td>
         </tr>
@@ -130,7 +139,7 @@
             </td>
 
             <td class="col2border">
-                <div class="text-format">21</div>
+                <div class="text-format"><?php echo $user['u_age']; ?> years</div>
 
             </td>
         </tr>
@@ -144,7 +153,7 @@
                 <div class="secondcol"><a>Email Address:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">ashanperera@gmail.com</div>
+                <div class="text-format"><?php echo $user['u_email']; ?></div>
 
             </td>
         </tr>
@@ -157,7 +166,7 @@
                 <div class="secondcol"><a>Address:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">No.426/D/1/Kadawatha</div>
+                <div class="text-format"><?php echo $user['u_address_1'] ?>,<?php echo $user['u_address_2']; ?></div>
 
             </td>
         </tr>
@@ -171,7 +180,7 @@
                 <div class="secondcol"><a>Zip/Post code:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">82550</div>
+                <div class="text-format"><?php echo $user['u_zip']; ?></div>
 
             </td>
         </tr>

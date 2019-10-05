@@ -1,3 +1,47 @@
+<?php
+require_once "init.php";
+
+// Redirecting to the main page if user is already logged in
+if($user){
+    header("Location: index.php");
+    die;
+}
+
+$error = null;
+
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $remember = isset($_POST['remember'])&&$_POST['remember']=='on'?true:false;
+
+    $user = $db->query("SELECT * FROM users WHERE u_email='$username' LIMIT 1")->fetch_assoc();
+
+    if($user){
+        if(md5($password)==$user['u_password']){
+            if($remember){
+                $remember_token = md5(time().$password);
+
+                setcookie('remember_token',$remember_token,3600*24*365+time(),'/');
+                
+                $db->query("UPDATE users SET u_remember_token='$remember_token' WHERE u_id={$user['u_id']} ");
+
+
+
+            } else {
+                $_SESSION['user_id'] = $user['u_id'];
+            }
+
+            header("Location: index.php");
+            die;
+        } else {
+            $error = "Incorrect password. Please try again.";
+        }
+    } else {
+        $error = "We can not find an account associated with your email address. ";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -60,10 +104,17 @@
 
     <!--Login form-->
 
-    <form action="index.html" onsubmit="return validateEmail()">
+    <form method="POST" onsubmit="return validateEmail()">
         <div class="box">
             <h1>Login</h1><br />
+            <?php
+            if($error){
+                ?>
+                    <p class="error"><?php echo $error;  ?></p>
 
+                <?php
+            }
+            ?>
 
             <input type="text" class="text-box" name="username" id="username" placeholder="User name" required></input>
             <p id="userError" class="error"></p>
@@ -79,7 +130,7 @@
 
             <br /><br />
 
-            <button class="bttn1" type="submit">Login</button><br /><br /><br />
+            <button class="bttn1" name="submit" value="Login" type="submit">Login</button><br /><br /><br />
 
             <div class="allign-text"><a>
                     Or login with</a>
@@ -99,7 +150,7 @@
             <br />
             <hr>
             <div class="formatting">
-                Don't have an account?Register Now!</div><br /><br />
+                Don't have an account? Register Now!</div><br /><br />
 
             <button class="bttn1" type="button" onclick="window.location.href = 'register.html'">Register</button><br /><br /><br />
 
