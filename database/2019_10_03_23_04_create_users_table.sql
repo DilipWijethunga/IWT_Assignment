@@ -1,6 +1,7 @@
 CREATE TABLE users (
     u_id INTEGER AUTO_INCREMENT,
     u_name VARCHAR(150),
+    u_img VARCHAR(150),
     u_gender VARCHAR(1),
     u_tel INTEGER,
     u_age INTEGER,

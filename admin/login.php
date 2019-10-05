@@ -1,14 +1,14 @@
 <?php
-require_once "init.php";
+require_once "../init.php";
 
 // Redirecting if user is already login
 if($user){
     if($user['u_type']=="admin"){
         // If user is an admin
-        header("Location: admin_dashboard.php");
+        header("Location: dashboard.php");
     } else {
         // Other users can go to home page
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
 
     die;
@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
             // Redirecting after a successfull login.
             $_SESSION['user_id']= $user['u_id'];
 
-            header("Location: admin_dashboard.php");
+            header("Location: dashboard.php");
             die;
         } else {
             $error = "Invalid password";
@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <title>Admin Login</title>
 </head>
 

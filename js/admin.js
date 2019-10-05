@@ -1,4 +1,4 @@
-function snack(message, type, color) {
+function snack(message, type, color,updatingId) {
   var snacksContainer = document.getElementById("snacks");
 
   var snackElmnt = document.createElement("div");
@@ -8,7 +8,7 @@ function snack(message, type, color) {
     message +
     '<div class="form-buttons-right">' +
     (type == "confirm"
-      ? "<button onclick=\"snack( 'You have successfully completed your action.','message','green' );hideSnack(event)\" class=\"snack-button red\">Yes</button>"
+      ? "<button onclick=\"window.location.href='delete_product.php?itemId="+updatingId+"'\" class=\"snack-button red\">Yes</button>"
       : "") +
     '<button onclick="hideSnack(event)" class="snack-button green">Cancel</button>' +
     "</div>";
@@ -22,7 +22,7 @@ function hideSnack(e) {
   e.target.parentElement.parentElement.remove();
 }
 
-function showOverlay(mode) {
+function showOverlay(mode,updatingId) {
   var popup = document.getElementById("popup");
 
   popup.setAttribute("class", "overlay");
@@ -30,12 +30,17 @@ function showOverlay(mode) {
   imageInput = document.getElementById("productImage");
   imageInputParent = imageInput.parentElement;
 
+  document.getElementById('itemId').setAttribute('value',mode =='Update'?updatingId:'');
+
   if (mode != "Search") {
     imageInputParent.setAttribute("class", "form-control form-control-image");
     imageInput.required = true;
+    document.getElementById('submitForm').setAttribute('method',"POST");
+
   } else {
     imageInputParent.setAttribute("class", "hidden");
     imageInput.required = false;
+    document.getElementById('submitForm').setAttribute('method',"GET");
   }
 
   var elements = document.getElementsByClassName("mode");
