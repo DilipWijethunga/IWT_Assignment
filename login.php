@@ -1,3 +1,53 @@
+<?php
+require_once "init.php";
+
+// Redirecting to the main page if user is already logged in
+if($user){
+    header("Location: index.php");
+    die;
+}
+
+$error = null;
+
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $remember = isset($_POST['remember'])&&$_POST['remember']=='on'?true:false;
+
+    // Retrieving the user for the given email address
+    $user = $db->query("SELECT * FROM users WHERE u_email='$username' LIMIT 1")->fetch_assoc();
+
+    if($user){
+        // Checking the passwords
+        if(md5($password)==$user['u_password']){
+            // If remember me checked storing user credentials in cookie
+            if($remember){
+                // Generating the remember token
+                $remember_token = md5(time().$password);
+
+                setcookie('remember_token',$remember_token,3600*24*365+time(),'/');
+                
+                // Updating the remember token with the new token
+                $db->query("UPDATE users SET u_remember_token='$remember_token' WHERE u_id={$user['u_id']} ");
+
+
+            // Otherwise storing in sessions
+            } else {
+                $_SESSION['user_id'] = $user['u_id'];
+            }
+
+            // Redirecting to main page after successfull logged
+            header("Location: index.php");
+            die;
+        } else {
+            $error = "Incorrect password. Please try again.";
+        }
+    } else {
+        $error = "We can not find an account associated with your email address. ";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,51 +69,22 @@
 
     <!-- Header -->
 
-    <nav id="navbar">
-
-
-        <!--    Logo-->
-        <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
-
-
-        <a id="cname">Online Meal Cart</a>
-
-        <!--    Register and Login buttons-->
-        <div id="reglogin">
-            <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
-            <button id="login">
-                Login</button>
-        </div>
-
-        <<div class="cart_user">
-            <a href="#"><img width="30" src="images/cart.svg" alt="cart"></a>
-            <a href="user_profile.html"><img width="50" src="images/account.svg" alt="cart"></a>
-            </div>
-
-            <!--    Navigation Bar-->
-            <div class="header-second-bar">
-                <div id="navlist">
-                    <a href="index.html">Home</a>
-                    <a href="categories.html">Menu</a>
-                    <a href="about_us.html">About Us</a>
-                    <a href="contact_us.html">Contact Us</a>
-                </div>
-
-                <!-- Search Button-->
-                <div class="search">
-                    <input type="text" placeholder="Search..." class="searcharea">
-                    <a href="search_results.html"><img src="images/search.svg" class="searchbtn"> </a>
-                </div>
-            </div>
-    </nav>
+    <?php require_once "header.php" ;?>
 
 
     <!--Login form-->
 
-    <form action="index.html" onsubmit="return validateEmail()">
+    <form method="POST" onsubmit="return validateEmail()">
         <div class="box">
             <h1>Login</h1><br />
+            <?php
+            if($error){
+                ?>
+                    <p class="error"><?php echo $error;  ?></p>
 
+                <?php
+            }
+            ?>
 
             <input type="text" class="text-box" name="username" id="username" placeholder="User name" required></input>
             <p id="userError" class="error"></p>
@@ -74,12 +95,12 @@
             <div class="formatting">
                 <input type="checkbox" name="remember" id="remember">Remember Me</a></input>
 
-                <a class="forgot" href="">Forgot Password?</a>
+                <a class="forgot" onclick="window.location.href='change_password.html'">Forgot Password?</a>
             </div>
 
             <br /><br />
 
-            <button class="bttn1" type="submit">Login</button><br /><br /><br />
+            <button class="bttn1" name="submit" value="Login" type="submit">Login</button><br /><br /><br />
 
             <div class="allign-text"><a>
                     Or login with</a>
@@ -99,7 +120,7 @@
             <br />
             <hr>
             <div class="formatting">
-                Don't have an account?Register Now!</div><br /><br />
+                Don't have an account? Register Now!</div><br /><br />
 
             <button class="bttn1" type="button" onclick="window.location.href = 'register.html'">Register</button><br /><br /><br />
 

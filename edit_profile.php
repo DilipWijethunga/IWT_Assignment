@@ -1,3 +1,58 @@
+<?php
+require_once "init.php";
+
+if(!$user){
+   header("Location: login.php") ;
+   die;
+}
+
+if(isset($_POST['submit'])){
+    $u_name = $_POST['firstname'];
+    $u_gender = $_POST['gender'];
+    $u_tel = $_POST['phone'];
+    $u_age = $_POST['age'];
+    $u_email = $_POST['email'];
+    $u_password = md5($_POST['pwd1']);
+    $u_password_confirm = md5($_POST['pwd2']);
+    $u_address_1 = $_POST['address1'];
+    $u_address_2 = $_POST['address2'];
+    $u_town = $_POST['town'];
+    $u_zip = $_POST['postcode'];
+
+    if($u_password!=$u_password_confirm){
+        $error = "Passwords Not Matching.";
+    } else {
+
+        $db->query(
+            "UPDATE users SET
+                u_name = '$u_name',
+                u_gender = '$u_gender',
+                u_tel = '$u_tel',
+                u_age = '$u_age',
+                u_email = '$u_email',
+                u_password = '$u_password',
+                u_address_1 = '$u_address_1',
+                u_address_2 = '$u_address_2',
+                u_town = '$u_town',
+                u_zip = '$u_zip'
+            WHERE u_id = '{$user['u_id']}'
+            "
+        );
+
+        $user['u_name'] = $u_name;
+        $user['u_gender'] = $u_gender;
+        $user['u_tel'] = $u_tel;
+        $user['u_age'] = $u_age;
+        $user['u_email'] = $u_email;
+        $user['u_password'] = $u_password;
+        $user['u_address_1'] = $u_address_1;
+        $user['u_address_2'] = $u_address_2;
+        $user['u_town'] = $u_town;
+        $user['u_zip'] = $u_zip;
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,48 +73,12 @@
 
     <!-- Header -->
 
-    <nav id="navbar">
-
-
-        <!--    Logo-->
-        <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
-
-
-        <a id="cname">Online Meal Cart</a>
-
-        <!--    Register and Login buttons-->
-        <div id="reglogin">
-            <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
-            <button id="login" onclick="window.location.href='login.html'">
-                Login</button>
-        </div>
-
-        <div class="cart_user">
-            <a href="#"><img width="30" src="images/cart.svg" alt="cart"></a>
-            <a href="user_profile.html"><img width="50" src="images/account.svg" alt="cart"></a>
-        </div>
-
-        <!--    Navigation Bar-->
-        <div class="header-second-bar">
-            <div id="navlist">
-                <a href="index.html">Home</a>
-                <a href="categories.html">Menu</a>
-                <a href="about_us.html">About Us</a>
-                <a href="contact_us.html">Contact Us</a>
-            </div>
-
-            <!-- Search Button-->
-            <div class="search">
-                <input type="text" placeholder="Search..." class="searcharea">
-                <a href="search_results.html"><img src="images/search.svg" class="searchbtn"> </a>
-            </div>
-        </div>
-    </nav>
+    <?php require_once "header.php" ;?>
 
 
     <!-- REGISTER FORM -->
 
-    <form>
+    <form method="POST">
         <div class="box">
             <div class="align-center">
                 <!--box Title-->
@@ -68,32 +87,32 @@
                 <!-- Name  -->
                 <label for="firstname">
                     Name:</label>
-                <input type="text" class="fix-width" name="firstname" id="firstname" placeholder="First name"></input><br /><br />
+                <input type="text" class="fix-width" name="firstname" id="firstname" placeholder="First name" value="<?php echo $user['u_name'] ?>" ></input><br /><br />
 
                 <!-- Gender-->
                 <label for="gender">
                     Gender:</label>
-                <input type="radio" name="gender" id="gender" value="male">Male</input>
-                <input type="radio" name="gender" value="female">Female</input><br /><br />
+                <input type="radio" name="gender" <?php echo $user['u_gender']=="M"?"checked=\"checked\" ":"" ?> id="gender" value="M">Male</input>
+                <input type="radio" name="gender" <?php echo $user['u_gender']=="F"?"checked=\"checked\" ":"" ?> value="F">Female</input><br /><br />
 
                 <!--Telephone-->
                 <label for="telno">
                     Telephone:</label>
-                <input type="tel" onchange="validateTelephone()" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
+                <input type="tel" value="<?php echo $user['u_tel']; ?>" onchange="validateTelephone()" class="fix-width" name="phone" id="telno" placeholder="011XXXXXXX" pattern="[0-9]{10}" required></input>
 
                 <p id="telerror" class="error"></p>
 
                 <!-- Age -->
                 <label for="Age">
                     Age:</label>
-                <input type="number" min="0" max="124" onchange="validateAge()" class="fix-width" name="Age" id="Age"></input>
+                <input type="number" value="<?php echo $user['u_age'] ?>" min="0" max="124" onchange="validateAge()" class="fix-width" name="age" id="Age"></input>
 
                 <p id="ageError" class="error"></p>
 
                 <!--Email -->
                 <label for="email">
                     Email Address:</label>
-                <input type="email" onchange="validateEmail()" class="fix-width" name="email" id="email" required></input>
+                <input type="email" value="<?php echo $user['u_email'] ?>" onchange="validateEmail()" class="fix-width" name="email" id="email" required></input>
 
                 <p id="emailError" class="error"></p>
 
@@ -121,19 +140,19 @@
                 <!-- Address 1 -->
                 <label for="address1">
                     Address line one:</label>
-                <input type="text" class="fix-width" name="address1" id="address1"></input><br /><br />
+                <input type="text" value="<?php echo $user['u_address_1']; ?>" class="fix-width" name="address1" id="address1"></input><br /><br />
                 <label for="address2">
                     Address line two:</label>
-                <input type="text" class="fix-width" name="address2" id="address2"></input><br /><br />
+                <input type="text" value="<?php echo $user['u_address_2']; ?>" class="fix-width" name="address2" id="address2"></input><br /><br />
                 <label for="town">
                     Town / City:</label>
-                <input type="text" class="fix-width" name="town" id="town"></input><br /><br />
+                <input type="text" value="<?php echo $user['u_town']; ?>" class="fix-width" name="town" id="town"></input><br /><br />
                 <label for="postcode">
                     Zip / Post code:</label>
-                <input type="text" class="fix-width" name="postcode" id="postcode"></input><br /><br />
+                <input type="text" value="<?php echo $user['u_zip']; ?>" class="fix-width" name="postcode" id="postcode"></input><br /><br />
 
 
-                <button class="bttn1" type="submit">Sign Up</button><br />
+                <button name="submit" value="submit" class="bttn1" type="submit">Edit Profile</button><br />
             </div>
         </div>
 
@@ -141,21 +160,7 @@
 
         <hr />
 
-        <div class="allign-text"><a>
-                OR</a>
-        </div>
-
-        <br />
-
-        <div class="social-login"><a href="#">
-                <img src="images/social/google.svg" alt="google account" /> </a>
-            <a href="#">
-                <img src="images/social/facebook.svg" alt="facebook account" /></a>
-            <a href="#">
-                <img src="images/social/twitter.svg" alt="twitter account" />
-            </a>
-
-        </div>
+       
 
     </form>
 

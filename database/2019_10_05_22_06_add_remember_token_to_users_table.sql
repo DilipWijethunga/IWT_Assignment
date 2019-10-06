@@ -1,0 +1,1 @@
+ALTER TABLE users ADD COLUMN u_remember_token VARCHAR(250);

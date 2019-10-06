@@ -1,3 +1,6 @@
+<?php
+require_once "init.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,47 +15,8 @@
 
 <body>
 
-    <!-- Navigation bar-->
-    <nav id="navbar">
-
-
-        <!--    Logo-->
-        <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
-
-
-        <a id="cname">Online Meal Cart</a>
-
-        <!--    Register and Login buttons-->
-        <div id="reglogin">
-            <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
-            <button id="login" onclick="window.location.href='login.html'">
-                Login</button>
-        </div>
-
-        <div class="cart_user">
-            <a href="#"><img width="30" src="images/cart.svg" alt="cart"></a>
-            <a href="user_profile.html"><img width="50" src="images/account.svg" alt="cart"></a>
-        </div>
-
-        <!--    Navigation Bar-->
-        <div class="header-second-bar">
-            <div id="navlist">
-                <a href="index.html">Home</a>
-                <a href="categories.html">Menu</a>
-                <a href="about_us.html">About Us</a>
-                <a href="contact_us.html">Contact Us</a>
-            </div>
-
-            <!-- Search Button-->
-            <div class="search">
-                <input type="text" placeholder="Search..." class="searcharea">
-                <a href="search_results.html"><img src="images/search.svg" class="searchbtn"> </a>
-            </div>
-        </div>
-    </nav>
-    <!--    End of Navigation bar-->
-
-
+    
+    <?php require_once "header.php" ;?>
 
     <div class="slideshow">
         <img src="images/slideshow/01.jpg" alt="slideshow" class="slider left" />

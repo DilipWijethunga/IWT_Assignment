@@ -1,3 +1,13 @@
+<?php
+require_once "init.php";
+
+// Redirect user to login page if user is not logged in
+if(!$user){
+    header("Location: login.php");
+    die;
+}
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -14,43 +24,7 @@
 
     <!-- Header -->
 
-    <nav id="navbar">
-
-
-        <!--    Logo-->
-        <a href="#"><img src="images/logo.png" alt="logo" id="logo"> </a>
-
-
-        <a id="cname">Online Meal Cart</a>
-
-        <!--    Register and Login buttons-->
-        <div id="reglogin">
-            <button id="reg_button" onclick="window.location.href='register.html'">Register</button>
-            <button id="login" onclick="window.location.href='login.html'">
-                Login</button>
-        </div>
-
-        <div class="cart_user">
-            <a href="#"><img width="30" src="images/cart.svg" alt="cart"></a>
-            <a href="user_profile.html"><img width="50" src="images/account.svg" alt="cart"></a>
-        </div>
-
-        <!--    Navigation Bar-->
-        <div class="header-second-bar">
-            <div id="navlist">
-                <a href="index.html">Home</a>
-                <a href="categories.html">Menu</a>
-                <a href="about_us.html">About Us</a>
-                <a href="contact_us.html">Contact Us</a>
-            </div>
-
-            <!-- Search Button-->
-            <div class="search">
-                <input type="text" placeholder="Search..." class="searcharea">
-                <a href="search_results.html"><img src="images/search.svg" class="searchbtn"> </a>
-            </div>
-        </div>
-    </nav>
+    <?php require_once "header.php" ;?>
 
 
 
@@ -75,7 +49,7 @@
             <td colspan="2" class="col2border">
                 <div class="myprofile">
                     <h1>My Profile</h1>
-                    <button type="button" class="bttn1" id="bttn1">Edit</button>
+                    <button type="button" class="bttn1" id="bttn1" onclick="window.location.href='edit_profile.html'">Edit</button>
                 </div>
             </td>
         </tr>
@@ -88,7 +62,7 @@
                 <div class="secondcol"><a>Full Name:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">Ashan Perera</div>
+                <div class="text-format"><?php echo $user['u_name']; ?></div>
 
             </td>
         </tr>
@@ -102,7 +76,7 @@
                 <div class="secondcol"><a>Gender:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">Male</div>
+                <div class="text-format"><?php echo $user['u_gender']=="M"?"Male":"Female"; ?></div>
 
             </td>
         </tr>
@@ -115,7 +89,7 @@
                 <div class="secondcol"><a>Phone Number:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">0774473352</div>
+                <div class="text-format"><?php echo $user['u_tel']; ?></div>
 
             </td>
         </tr>
@@ -130,7 +104,7 @@
             </td>
 
             <td class="col2border">
-                <div class="text-format">21</div>
+                <div class="text-format"><?php echo $user['u_age']; ?> years</div>
 
             </td>
         </tr>
@@ -144,7 +118,7 @@
                 <div class="secondcol"><a>Email Address:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">ashanperera@gmail.com</div>
+                <div class="text-format"><?php echo $user['u_email']; ?></div>
 
             </td>
         </tr>
@@ -157,7 +131,7 @@
                 <div class="secondcol"><a>Address:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">No.426/D/1/Kadawatha</div>
+                <div class="text-format"><?php echo $user['u_address_1'] ?>,<?php echo $user['u_address_2']; ?></div>
 
             </td>
         </tr>
@@ -171,7 +145,7 @@
                 <div class="secondcol"><a>Zip/Post code:</a></div>
             </td>
             <td class="col2border">
-                <div class="text-format">82550</div>
+                <div class="text-format"><?php echo $user['u_zip']; ?></div>
 
             </td>
         </tr>
