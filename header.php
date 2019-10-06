@@ -13,6 +13,10 @@
     if($user){
         ?>
 
+        <div id="reglogin">
+            <button onclick="window.location.href='logout.php'" id="login">
+                Logout</button>
+        </div>
         <div class="cart_user">
             <a href="cart.php"><img width="30" src="images/cart.svg" alt="cart"></a>
             <a href="user_profile.php"><img width="50" src="images/account.svg" alt="cart"></a>
@@ -37,8 +41,8 @@
     <div id="navlist">
         <a href="index.php">Home</a>
         <a href="categories.php">Menu</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact_us.html">Contact Us</a>
+        <a href="about_us.php">About Us</a>
+        <a href="contact_us.php">Contact Us</a>
     </div>
 
     <!-- Search Button-->
