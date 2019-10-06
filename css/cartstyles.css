@@ -1,0 +1,295 @@
+body{
+	background-image:url(../images/ccc.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+    margin: 0;
+}
+/* Header Styles */
+
+#logo {
+  width: 130px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 100;
+}
+
+.cart_user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  fill: green;
+}
+
+#reglogin {
+  position: absolute;
+  right: 100px;
+  top: 25px;
+}
+
+#navbar {
+  width: 100%;
+  height: 140px;
+  background: #404040;
+  text-align: center;
+}
+
+.header1 {
+  position: absolute;
+  font-size: 40px;
+  top: 730px;
+  left: 500px;
+}
+#cart {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+}
+
+#reglogin button,
+login {
+  background-color: #c1d72e;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  color: black;
+}
+.searchbtn {
+  position: absolute;
+  width: 20px;
+  padding-left: 0px;
+  right: 9px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.search {
+  float: right;
+  margin-right: 8px;
+    margin-top: -8px;
+  position: relative;
+}
+
+.searcharea {
+  background-color: #c1d72e;
+  border: none;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 8px;
+  transition-duration: 0.5s;
+  position: absolute;
+  right: 8px;
+}
+
+.searcharea:focus {
+  width: calc(100vw - 200px);
+}
+
+#navlist {
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  padding-right: 80px;
+}
+
+#navlist a {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu-content {
+  color: black;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.menu:hover .menu-content {
+  display: block;
+}
+
+.menu li,
+.menu li a {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.header-second-bar {
+  background: #404040;
+  color: #fff;
+  padding: 16px;
+  margin-top: 26px;
+  position: relative;
+}
+
+#cname {
+  color: #c1d72e;
+  font-family: cursive;
+  font-size: 50px;
+}
+
+
+
+.cartgallery {
+  margin: 20px;
+  border: 1px solid #ccc;
+  width: 250px;
+  float:left;
+  margin-left:55px;
+}
+
+.cartgallery:hover {
+  border: 1px solid #777;
+}
+
+.cartgallery img {
+  width: 100%;
+  height: 200px;
+}
+
+.cartdesc {
+  padding: 15px;
+  text-align: center;
+  background-color:white;
+}
+.mt1b{
+
+	
+}
+.mt1b button{
+  background-color: #AABBCC; 
+  border: 1px solid green; 
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+
+}
+.mt1b button:hover {
+  background-color: #BBCCDD;
+}
+
+.mt2b{
+	position:relative;
+	
+}
+.mt2b button{
+  background-color: #AABBCC; 
+  border: 1px solid green; 
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left;
+    
+}
+.mt2b button:hover {
+  background-color: #BBCCDD;
+}
+
+.mt3b{
+	position:relative;
+	
+}
+.mt3b button{
+  background-color: #AABBCC; 
+  border: 1px solid green; 
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+  
+}
+.mt3b button:hover {
+  background-color: #BBCCDD;
+}
+
+.mt4b{
+	position:relative;
+	 
+}
+.mt4b button{
+  background-color: #AABBCC; 
+  border: 1px solid green; 
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+  
+}
+.mt4b button:hover {
+  background-color: #BBCCDD;
+}
+
+
+
+/* Footer */
+
+.footer {
+  border: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #cdd0ce;
+}
+
+.links {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.socialbtn {
+  margin-right: 0px;
+  margin-top: -40px;
+}
+
+footer .socialbtn img {
+  position: relative;
+  float: right;
+  width: 50px;
+  bottom: 100px;
+  padding: 5px;
+}
+
+.footer .copyright {
+  width: 100%;
+  margin-top: 32px;
+  border-top: solid 1px rgba(48, 22, 4, 0.4);
+  text-align: center;
+  padding-top: 8px;
+}
+
+.footer td {
+  position: relative;
+  padding: 8px;
+}
+
+.footer td .vertical-line {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background: rgba(48, 22, 4, 0.4);
+  right: 16px;
+  top: 0;
+  border-radius: 100%;
+}
+
