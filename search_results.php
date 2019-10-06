@@ -3,14 +3,20 @@ require_once "init.php";
 
 $conditions = [];
 
+// Storing the page title in variable
 $display_name = "";
+
+// when search results filtering by category
 if(isset($_GET['category'])){
     $catgeory_id = $_GET['category'];
 
+    // Retrieving the category to get the category name
     $category = $db->query("SELECT * FROM product_categories WHERE prd_cat_id=$catgeory_id")->fetch_assoc();
 
+    // Changing the display name to category
     $display_name = "Search results for \"{$category['prd_cat_name']}\" ";
 
+    // Storing query conditions in an array
     $conditions[] = " prd_cat_id=$catgeory_id ";
 
 }
@@ -18,22 +24,25 @@ if(isset($_GET['category'])){
 if(isset($_GET['q'])){
     $keyword = $_GET['q'];
 
+    // Changing the title with the given keyword
     $display_name = "Search results for \"$keyword\".";
 
+    // Storing category filteration in conditions array
     $conditions[] = " ( prd_name LIKE \"%$keyword%\" OR prd_desc LIKE \"%$keyword%\" ) ";
     
 }
 
-
+// Retrieving categories
 $categories = $db->query("SELECT * FROM product_categories");
 
+// Retrieving products for given filterations
 $products = $db->query("SELECT * FROM products".(!empty($conditions)?" WHERE ":"").implode(" AND ",$conditions));
 
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Search Results</title>
+	<title><?php  echo $display_name; ?></title>
 <link rel="stylesheet" type="text/css" href="css/search_results.css">
 	 
 </head>

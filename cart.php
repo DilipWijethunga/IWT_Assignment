@@ -1,18 +1,21 @@
 <?php
 require_once "init.php";
 
+// If user is tried to remove an item from cart
 if(isset($_GET['remove'])){
     $product_id = $_GET['remove'];
 
     $db->query("DELETE FROM cart WHERE u_id='{$user['u_id']}' AND prd_id=$product_id ");
 }
 
+// If user is trying to add an item to cart
 if(isset($_GET['add'])){
     $product_id = $_GET['add'];
 
     $db->query("INSERT INTO cart (prd_id,u_id) VALUES ($product_id,{$user['u_id']})");
 }
 
+// Selecting products in the user's cart
 $carts = $db->query(
     "SELECT *
     FROM cart AS c

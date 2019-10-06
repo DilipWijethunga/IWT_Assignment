@@ -12,7 +12,7 @@ $config = [
 
     // Application configurations
     "app"=>[
-        "name"=>"Meal Cart",
+        "name"=>"Food Corner",
         "url"=>"http://localhost/meal_cart"
     ]
 ];

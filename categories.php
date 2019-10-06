@@ -1,6 +1,7 @@
 <?php
 require_once "init.php";
 
+// Retrieving all categories from categories
 $categories = $db->query("SELECT * FROM product_categories;");
 ?>
 <!DOCTYPE HTML>
@@ -24,10 +25,12 @@ $categories = $db->query("SELECT * FROM product_categories;");
 		$categories_count = 0;
 		
 		echo "<tr>";
+		// Looping through categories and add all to an array
 		while($category = $categories->fetch_assoc()){
 			$category_wise_products[$categories_count] = [];
 			
 			$products = $db->query("SELECT * FROM products WHERE prd_cat_id={$category['prd_cat_id']};");
+			// Printing table headers
 			echo "<th>".$category["prd_cat_name"]."</th>";
 			while($product = $products->fetch_assoc()){
 				array_push($category_wise_products[$categories_count],$product['prd_name']);
@@ -36,9 +39,9 @@ $categories = $db->query("SELECT * FROM product_categories;");
 		}
 		echo "</tr>";
 		
-		$row_count = max(array_keys($category_wise_products));
 		
-		for($i=0;$i<$row_count;$i++){
+		// Looping throgh products
+		for($i=0;$i<10;$i++){
 			echo "<tr>";
 			for($j=0;$j<$categories_count;$j++){
 				echo "<td>";

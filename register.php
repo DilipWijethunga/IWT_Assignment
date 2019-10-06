@@ -10,7 +10,10 @@ if($user){
 
 // Inserting to the database after form submit.
 if(isset($_POST['submit'])){
+    // Encrypting the password
     $password = md5($_POST['pwd1']);
+    
+    // Inserting to database
     $sql = 
     "INSERT INTO users (
         u_name,
@@ -45,10 +48,11 @@ if(isset($_POST['submit'])){
     $result = $db->query($sql);
 
     if($result){
+        // Redirecting to the home page
         header("Location: index.php");
         die;
     } else {
-        // Handle your error
+        die("Database error");
     }
 
 }

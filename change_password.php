@@ -14,13 +14,20 @@ if(isset($_POST['submit'])){
     $new_password = $_POST['new_password'];
     $confirm_password = $_POST['confirm_password'];
 
+    // Checking email is match with old email
     if($email==$user['u_email']){
+        
+        // Checking last password and current user password after encryption
         if(md5($last_password)==$user['u_password']){
 
+            // Checking the confirmed password and new password
             if($new_password==$confirm_password){
+                
+                // Updating the encrypted password
                 $password = md5($new_password);
                 $db->query("UPDATE users SET u_password='$password'");
 
+                // Logout the user after changed password
                 header("Location: logout.php");
                 die;
             } else {

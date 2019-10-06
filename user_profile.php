@@ -1,6 +1,7 @@
 <?php
 require_once "init.php";
 
+// Redirect user to login page if user is not logged in
 if(!$user){
     header("Location: login.php");
     die;

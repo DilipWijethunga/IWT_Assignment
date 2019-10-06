@@ -21,6 +21,7 @@ if($db->connect_error){
 $user = null;
 
 
+// If remember me unchecked on login
 if(isset($_SESSION['user_id'])){
 
     $user_id = $_SESSION['user_id'];
@@ -30,10 +31,12 @@ if(isset($_SESSION['user_id'])){
     if($query){
         $user= $query->fetch_assoc();
         if(!$user){
+            // Destroying the session if invalid credentials
             session_destroy();
         }
     }
 
+    // Remember me ticked
 } else if(isset($_COOKIE['remember_token'])){
 
     $remember_token = $_COOKIE['remember_token'];
@@ -41,6 +44,7 @@ if(isset($_SESSION['user_id'])){
     $user= $db->query("SELECT * FROM users WHERE u_remember_token='$remember_token' LIMIT 1")->fetch_assoc();
 
     if(!$user){
+        // Destroying the cookie
         $_COOKIE['remember_token'] = null;
     }
 }

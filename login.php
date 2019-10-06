@@ -14,23 +14,29 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];
     $remember = isset($_POST['remember'])&&$_POST['remember']=='on'?true:false;
 
+    // Retrieving the user for the given email address
     $user = $db->query("SELECT * FROM users WHERE u_email='$username' LIMIT 1")->fetch_assoc();
 
     if($user){
+        // Checking the passwords
         if(md5($password)==$user['u_password']){
+            // If remember me checked storing user credentials in cookie
             if($remember){
+                // Generating the remember token
                 $remember_token = md5(time().$password);
 
                 setcookie('remember_token',$remember_token,3600*24*365+time(),'/');
                 
+                // Updating the remember token with the new token
                 $db->query("UPDATE users SET u_remember_token='$remember_token' WHERE u_id={$user['u_id']} ");
 
 
-
+            // Otherwise storing in sessions
             } else {
                 $_SESSION['user_id'] = $user['u_id'];
             }
 
+            // Redirecting to main page after successfull logged
             header("Location: index.php");
             die;
         } else {
