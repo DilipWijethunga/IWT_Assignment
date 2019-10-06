@@ -126,6 +126,7 @@ $products = $db->query("SELECT * FROM products".(!empty($conditions)?" WHERE ":"
                     
                     <td class="product-buy">
                         <button class="buynow-wrapper" input="button">Buy Now</button>
+                        <button onclick="window.location.href='cart.php?add=<?php echo $product['prd_id'] ?>'" class="buynow-wrapper" input="button">Add to cart</button>
                     </td>
                 
                 <?php
