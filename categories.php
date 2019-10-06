@@ -1,21 +1,7 @@
 <?php
-$servername="localhost";
-$username="root";
-$password="";
-$database="meal_cart";
+require_once "init.php";
 
-//create connection
-$conn=new mysqli($servername,$username,$password,$database);
-
-//check connection
-if($conn->connect_error)
-{
-    die("Connection failed : ".$conn->connect_error);
-}
-
-   echo"Connect successfully <br/>";
-
-
+$categories = $db->query("SELECT * FROM product_categories;");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -71,27 +57,40 @@ if($conn->connect_error)
 
 
     </nav>
-
+	<table class="food-menu" >
    <?php
-		$sql="SELECT * FROM menu";
-		$result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-        echo "<table><tr><td>".$row["Graphics & Design"]."</td>";
-		echo "<td>".$row["RICE"]."</td>";
-		echo "<td>".$row["Noodles"]."</td>";
-		echo "<td>".$row["Pasta"]."</td>";
-		echo "<td>".$row["Dessert"]."</td>";
-		echo "<td>".$row["salat"]."</td></tr>";
-			echo"<br/><br/>";
-        }
-        } else {
-         echo "0 results";
-        }
-       echo "</table>";
+		$category_wise_products = [];
+		
+		$categories_count = 0;
+		
+		echo "<tr>";
+		while($category = $categories->fetch_assoc()){
+			$category_wise_products[$categories_count] = [];
+			
+			$products = $db->query("SELECT * FROM products WHERE prd_cat_id={$category['prd_cat_id']};");
+			echo "<th>".$category["prd_cat_name"]."</th>";
+			while($product = $products->fetch_assoc()){
+				array_push($category_wise_products[$categories_count],$product['prd_name']);
+			}
+			$categories_count++;
+		}
+		echo "</tr>";
+		
+		$row_count = max(array_keys($category_wise_products));
+		
+		for($i=0;$i<$row_count;$i++){
+			echo "<tr>";
+			for($j=0;$j<$categories_count;$j++){
+				echo "<td>";
+				
+				echo isset($category_wise_products[$j][$i])?$category_wise_products[$j][$i]:"";
+				
+				echo "</td>";
+			}
+			echo "</tr>";
+		}
 		?>
-
+	</table>
     <footer class="footer">
         <table width="100%">
             <tr>
